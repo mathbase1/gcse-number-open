@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A self-contained, randomised Eduqas Foundation-focused GCSE Number assessment. Student number only; 15 sections; 100 marks.">
+<title>GCSE Maths — Number | Eduqas Foundation | 15 sections · 100 marks</title>
+<style>
+:root{--ink:#1f2937;--muted:#606b7c;--accent:#2563eb;--bg:#fff;--panel:#f8fafc;--border:#dce3ed;--sidew:208px;--header-height:76px;--redbg:#fee2e2;--redfg:#991b1b;--orbg:#fff0d5;--orfg:#874409;--grbg:#dcfce7;--grfg:#065f46}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:18px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}body{min-height:100vh}button,input,select{font:inherit}button{cursor:pointer;touch-action:manipulation}button:disabled{opacity:.55;cursor:default}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #2563eb;outline-offset:3px}input,select{user-select:text}body{-webkit-user-select:none;user-select:none}h2,h3,p{overflow-wrap:anywhere}h2{font-size:1.3rem;line-height:1.45;margin:.2rem 0}h3{font-size:1.1rem;margin:.25rem 0 .65rem}p{margin:.6rem 0}strong{font-weight:750}[hidden]{display:none!important}.small{font-size:.82rem}.muted{color:var(--muted)}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--border)}#tabbar{display:flex;gap:.38rem;align-items:center;overflow:auto hidden;white-space:nowrap;padding:.6rem .75rem;min-height:74px;scrollbar-width:thin}#tabbar button{appearance:none;flex:0 0 auto;border:1px solid var(--border);border-radius:999px;padding:.35rem .8rem;min-width:48px;min-height:46px;background:var(--bg);color:var(--ink);font-size:.9rem;font-weight:750;position:relative}#tabbar button:hover{border-color:#819ce0}#tabbar button.active{color:white;background:var(--accent);border-color:var(--accent)}#tabbar button.answered::after{content:"";position:absolute;bottom:3px;left:calc(50% - 2px);width:4px;height:4px;border-radius:50%;background:currentColor}
+#uxside{position:fixed;left:0;top:var(--header-height);bottom:0;width:var(--sidew);padding:1rem .8rem;background:var(--bg);border-right:1px solid var(--border);z-index:40;overflow-y:auto;display:flex;flex-direction:column;gap:.45rem}.sidebar-title{color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;font-weight:800;margin:.7rem 0 .1rem}.side-button{appearance:none;border:1px solid var(--border);border-radius:.45rem;padding:.4rem .65rem;min-height:44px;background:var(--bg);color:var(--ink);text-align:left;width:100%;font-size:.88rem;font-weight:650}.side-button.active{background:var(--accent);color:white;border-color:var(--accent)}.side-row{display:contents}.swatch{width:12px;height:12px;border-radius:50%;display:inline-block;margin-right:.5rem;box-shadow:0 0 0 1px #8190a1;vertical-align:middle}.swatch.blue{background:#dceafb}.swatch.yellow{background:#fff1bc}.swatch.none{background:white}.side-identity{border-bottom:1px solid var(--border);padding-bottom:.7rem;font-size:.8rem}.side-identity strong{display:block;font-size:1rem;overflow-wrap:anywhere}.attempt-mini{font-size:.7rem;color:var(--muted);margin-top:.25rem}.side-progress{margin-top:1rem;border-top:1px solid var(--border);padding-top:1rem;font-size:.77rem;line-height:1.5}.side-progress progress{width:100%;height:8px;accent-color:var(--accent)}#sessionStatus{display:block;color:var(--muted);font-size:.73rem;margin-top:.45rem}.side-submit{margin-top:.6rem;width:100%;font-size:.86rem!important;line-height:1.35}
+main{max-width:1300px;width:calc(100% - var(--sidew) - 3rem);margin:1.25rem 1.5rem 3rem calc(var(--sidew) + 1.5rem);padding-bottom:2rem}.course-strip{display:flex;justify-content:space-between;gap:1rem;align-items:center;border-bottom:1px solid var(--border);padding:0 0 .8rem;margin-bottom:1rem;font-size:.79rem;color:var(--muted)}.course-strip strong{color:var(--ink);font-size:.85rem}.persistent-warning{padding:.6rem .8rem;background:#fff6e8;color:#864008;border:1px solid #f2d7af;border-radius:.5rem;font-size:.82rem;margin:0 0 1rem}.notice{padding:.75rem 1rem;border:1px solid var(--border);border-radius:.5rem;background:var(--panel);font-size:.85rem;margin:.75rem 0}.page{display:none}.page.active{display:block;animation:fade .12s ease-out}@keyframes fade{from{opacity:.7}to{opacity:1}}.qpanel{border:1px solid var(--border);border-radius:.75rem;overflow:hidden;margin:0 0 1.15rem;background:var(--bg)}.qhead{padding:1rem 1.25rem;border-bottom:1px solid var(--border);background:#fbfdff}.flex{display:flex;align-items:center;gap:.8rem;justify-content:space-between}.flex h2{flex:1}.nocalc{width:36px;height:36px;flex:0 0 auto}.marktag{font-size:.82rem;font-weight:550;color:var(--muted);white-space:nowrap}.question-meta{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:.74rem;color:var(--muted);margin-top:.55rem}.score{font-weight:800;font-size:.9rem;color:var(--ink)}.qbody{padding:0 1.35rem}.question-part{padding:1.25rem 0 1.45rem;border-bottom:1px solid var(--border)}.question-part:last-child{border-bottom:0}.part-heading{display:grid;grid-template-columns:2rem minmax(0,1fr) auto;gap:.4rem;align-items:start}.part-letter{font-weight:800}.part-prompt{font-size:1.07rem;line-height:1.8}.part-prompt math{font-size:1.28em}.part-marks{font-size:.75rem;color:var(--muted);padding-top:.3rem}.part-note{font-size:.8rem;line-height:1.5;color:var(--muted);margin:.45rem 1.7rem .85rem 2.4rem}.answer-row,.template-row{display:flex;align-items:center;flex-wrap:wrap;gap:.65rem 1.5rem;margin:.8rem 0 0 2.4rem;max-width:100%}.template-row{gap:.6rem;align-items:center}.template-row>math{font-size:1.5rem}.answer-break{flex-basis:100%;height:0}.answer-field{display:inline-flex;flex-direction:column;align-items:flex-start;gap:.35rem;max-width:100%;min-width:0}.field-label{font-size:.74rem;font-weight:650;color:var(--muted);line-height:1.35}.answer-entry{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.5rem;max-width:100%;min-width:0}.answer-input{width:8.3rem;max-width:100%;height:48px;border:2px solid #9aaec7;border-radius:.42rem;background:#fff;color:#12263d;text-align:center;padding:.35rem .55rem;font-size:1.12rem;line-height:1.2;font-variant-numeric:tabular-nums;box-shadow:0 2px 4px #12263d0b}.answer-input:disabled{opacity:1;background:#f8fafc;color:#152d46;border-color:#c0cddd;-webkit-text-fill-color:#152d46}.select-input{width:auto;min-width:6.3rem;max-width:100%;text-align:left;font-size:.95rem;padding-right:1.5rem}.order-input{width:14rem}.list-input{width:min(29rem,100%);min-width:12rem;text-align:left}.prime-input{width:16rem;text-align:left}.unit{font-weight:650;font-size:1rem}.number-cards{display:flex;flex-wrap:wrap;gap:.65rem;margin:.65rem 0}.number-card{border:1px solid var(--border);background:var(--panel);padding:.35rem .8rem;border-radius:.5rem;display:inline-flex;align-items:center;gap:.45rem;min-height:60px;white-space:nowrap}.number-card strong{font-size:.84rem;color:var(--muted)}
+/* Fraction rules are deliberately not called .bar, so they cannot inherit tab styling. */
+.frac-widget{display:inline-grid;grid-template-rows:52px 4px 52px;grid-template-columns:82px;gap:7px;justify-items:center;align-items:center;vertical-align:middle;padding:3px 4px}.frac-widget .frac-input{width:64px;height:52px;border-radius:.3rem;padding:.2rem;text-align:center;font-size:1.12rem}.fraction-rule{width:82px;height:3px;background:var(--ink);border-radius:2px;align-self:center}.std-widget{display:inline-grid;grid-template-columns:6rem 1.2rem 2.2rem 3.2rem;grid-template-rows:1.2rem 3rem;align-items:center;column-gap:.25rem;min-width:0;max-width:100%;vertical-align:middle}.std-widget .coefficient{grid-area:2/1;width:6rem}.multiply-sign{grid-area:2/2;text-align:center;font-size:1.3rem}.standard-base{grid-area:2/3;text-align:center;font-size:1.55rem;line-height:1}.std-widget .exponent{grid-area:1/4/3/5;align-self:start;margin-top:6px;width:3.2rem;height:38px;font-size:1.02rem;padding:.2rem;border-radius:.3rem}.power-widget{display:inline-grid;grid-template-columns:auto 3.2rem;grid-template-rows:1.2rem 3rem;gap:0 .2rem;align-items:center;min-width:5rem}.power-base{grid-area:2/1;font-size:1.7rem;line-height:1}.power-widget .exponent{grid-area:1/2/3/3;align-self:start;margin-top:6px;width:3.2rem;height:38px;font-size:1.02rem;padding:.2rem;border-radius:.3rem}.prime-tools{display:inline-flex;gap:.25rem;flex-wrap:wrap}.symbol-btn{min-width:40px;min-height:42px;border:1px solid var(--border);background:var(--panel);color:var(--ink);border-radius:.35rem;font-weight:750}.field-feedback{font-size:.78rem;max-width:30rem;padding:.35rem .5rem;border-radius:.3rem;line-height:1.5}.field-feedback.correct{color:#075736;background:#e4f5e9}.field-feedback.partial{color:#7c420b;background:#fff0d5}.field-feedback.incorrect{color:#8b2020;background:#fff0f0}.expected{display:block;margin-top:.15rem;font-weight:550}.expected math{font-size:1.15rem}.inline-field .field-feedback{max-width:12rem}.field-incorrect .answer-input{border-color:#b46c62}.field-correct .answer-input{border-color:#66a286}
+.primary,.secondary,.btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:.35rem;border:1px solid var(--accent);border-radius:999px;min-height:46px;padding:.5rem 1rem;font-size:.9rem;font-weight:750;line-height:1.5;text-decoration:none}.primary,.btn{background:var(--accent);color:#fff}.secondary{background:var(--bg);color:var(--ink);border-color:var(--border)}.primary:hover,.btn:hover{filter:brightness(.95)}.page-actions{display:flex;align-items:center;justify-content:space-between;gap:.65rem;font-size:.8rem;color:var(--muted);margin:1rem 0 2rem}.page-actions button{font-size:.85rem}.actions{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}.result-top{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1rem 0}.score-card,.action-card{border:1px solid var(--border);border-radius:.7rem;padding:1.2rem;background:var(--panel)}.score-line{display:flex;align-items:baseline;gap:.5rem}.score-line strong{font-size:3.25rem;line-height:1.2;letter-spacing:-.04em}.score-line span{font-size:1.25rem;color:var(--muted)}#percentage{font-size:1.3rem;font-weight:800;color:var(--accent)}#resultMeta{font-size:.73rem;overflow-wrap:anywhere}#endedBanner{background:#eaf5f0;border-color:#adcec0;color:#17563d}#endedBanner.ended-early{background:#fff3e2;border-color:#e8cda2;color:#86420c}#masterySummary{border-left:4px solid var(--accent);padding:1rem 1.2rem;margin:1.1rem 0;background:var(--panel);border-radius:0 .6rem .6rem 0;font-size:.9rem}.table-scroll{overflow-x:auto;margin:1rem 0}table{width:100%;border-collapse:collapse;font-size:.88rem}th,td{text-align:left;padding:.7rem .8rem;border:1px solid var(--border);vertical-align:middle}thead th{background:var(--panel);font-weight:750}tbody th{font-weight:600}.markcell{font-weight:800;white-space:nowrap}.mark-green{background:var(--grbg)!important;color:var(--grfg)!important}.mark-orange{background:var(--orbg)!important;color:var(--orfg)!important}.mark-red{background:var(--redbg)!important;color:var(--redfg)!important}.review-link{border:0;background:none;color:var(--ink);font-size:inherit;font-weight:600;text-align:left;padding:0;text-decoration:underline;text-decoration-color:#9db3d6;text-underline-offset:3px}.certificate-panel .qhead{background:#eff5fe}.certificate-panel .qbody{padding:1.1rem 1.25rem}#certPreview{display:block;max-width:100%;width:700px;height:auto;border:1px solid var(--border);margin:1rem 0 .35rem;border-radius:.3rem;background:#fff}.history-list{display:flex;gap:.65rem;flex-wrap:wrap}.history-item{display:flex;flex-direction:column;gap:.2rem;text-align:left;border:1px solid var(--border);border-radius:.55rem;background:var(--panel);color:var(--ink);padding:.75rem .9rem;max-width:100%}.history-item span{font-size:.72rem;color:var(--muted)}footer{font-size:.72rem;color:var(--muted);border-top:1px solid var(--border);padding-top:1rem;margin-top:1.5rem}
+.modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;background:#122238aa;padding:1.2rem;overflow-y:auto}.modal-panel{width:min(690px,100%);max-height:calc(100dvh - 2.4rem);overflow-y:auto;border:1px solid var(--border);border-radius:.85rem;padding:1.5rem 1.6rem;background:var(--bg);color:var(--ink);box-shadow:0 24px 75px #0004}.modal-panel h1{font-size:1.65rem;line-height:1.3;margin:.3rem 0 .6rem}.eyebrow{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:850}.modal-panel p{font-size:.91rem;line-height:1.6}.modal-stat{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.modal-stat span{font-size:.8rem;background:var(--panel);border:1px solid var(--border);padding:.3rem .65rem;border-radius:999px}.intro-warning{border:1px solid #efcf97;background:#fff6e7;color:#7e440c;padding:.8rem 1rem;border-radius:.55rem;margin:1rem 0;font-size:.87rem}#startForm label{font-size:.85rem;font-weight:750;display:block;margin:1rem 0 .35rem}.start-row{display:flex;gap:.65rem;flex-wrap:wrap}#studentInput{flex:1;min-width:160px;min-height:52px;border:2px solid #9aaec7;background:#fff;color:#152d46;padding:.6rem .75rem;border-radius:.5rem;font-size:1.05rem;max-width:100%}#startBtn{border-radius:.5rem;min-height:52px;padding:.55rem 1.1rem}.error{font-size:.84rem;font-weight:700;color:#b91c1c;margin-top:.55rem}[aria-invalid="true"]{border-color:#b91c1c!important}.privacy-note{font-size:.74rem!important;color:var(--muted);margin:1rem 0 .2rem!important}.cancel-row{margin-top:.7rem}.cancel-row button{min-height:40px;font-size:.8rem}
+#overlayTint{position:fixed;inset:0;pointer-events:none;z-index:1100;display:none}body.overlay-blue #overlayTint{display:block;background:rgba(37,99,235,.12)}body.overlay-yellow #overlayTint{display:block;background:rgba(255,221,87,.16)}body.dark{--bg:#000;--ink:#f5f7fb;--muted:#c5cfde;--panel:#0b1017;--border:#344154;background:#000;color:var(--ink)}body.dark .qhead{background:#06090e}body.dark .certificate-panel .qhead{background:#0b1930}body.dark .answer-input,body.dark #studentInput{background:#fff;color:#152d46}body.dark .answer-input:disabled{background:#edf2f8;color:#152d46}body.dark .persistent-warning,body.dark .intro-warning{background:#25190b;border-color:#785124;color:#f2d5a6}body.dark #endedBanner{background:#071e13;border-color:#296d4d;color:#bce6ce}body.dark #endedBanner.ended-early{background:#271908;border-color:#805b24;color:#f2d5a6}body.dark .modal{background:#000c}body.dark .error{color:#ffb8b8}
+@media(min-width:1750px){main{margin-left:calc(var(--sidew) + (100vw - var(--sidew) - 1300px)/2);margin-right:auto}}
+@media(max-width:1000px){:root{--sidew:176px}main{margin-left:calc(var(--sidew) + 1rem);margin-right:1rem;width:calc(100% - var(--sidew) - 2rem)}.qbody{padding:0 1rem}.result-top{grid-template-columns:1fr}.part-prompt{font-size:1rem}.std-widget{grid-template-columns:5.3rem 1.2rem 2rem 3.2rem}.std-widget .coefficient{width:5.3rem}}
+@media(max-width:680px){html,body{font-size:16px}#tabbar{min-height:65px;padding:.5rem}#tabbar button{min-height:43px;min-width:43px;padding:.3rem .65rem}#uxside{position:static;width:auto;border-right:0;border-bottom:1px solid var(--border);padding:.55rem .7rem;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.4rem}.sidebar-title{margin:0 .15rem 0 .35rem;font-size:.64rem}.side-row{display:flex;gap:.3rem}.side-button{width:auto;min-height:39px;padding:.3rem .55rem;font-size:.77rem}.side-identity,.side-progress,.attempt-mini,.side-submit{display:none}.swatch{display:none}main{width:auto;margin:1rem .7rem 2rem}.course-strip{font-size:.72rem;gap:.6rem}.course-strip strong{font-size:.76rem}.qhead{padding:.85rem}.qbody{padding:0 .8rem}.part-heading{grid-template-columns:1.5rem minmax(0,1fr) auto;gap:.25rem}.part-note,.answer-row,.template-row{margin-left:1.75rem}.part-prompt{font-size:1rem;line-height:1.8}.part-prompt math{font-size:1.15em}.answer-row{gap:.85rem 1.2rem}.part-note{margin-right:0}.question-part{padding:1rem 0 1.2rem}.question-meta{font-size:.68rem}.select-input{max-width:100%;width:auto;min-width:5.8rem}.answer-field{max-width:100%}.prime-input,.order-input{width:13rem}.list-input{width:100%;min-width:0}.answer-entry{max-width:100%}.number-card{padding:.3rem .5rem}.number-cards{gap:.4rem}.page-actions>span{display:none}.modal{padding:.75rem;align-items:center}.modal-panel{padding:1.1rem;max-height:calc(100dvh - 1.5rem)}.modal-panel h1{font-size:1.4rem}.start-row>*{flex-basis:100%}#studentInput{width:100%}.modal-stat{gap:.3rem}.modal-stat span{font-size:.7rem;padding:.25rem .5rem}.score-card,.action-card{padding:1rem}.result-top{gap:.8rem}.page-actions button{font-size:.8rem}.answer-input{max-width:100%}th,td{padding:.5rem;font-size:.77rem}table td:last-child,table thead th:last-child{display:none}.actions .btn,.actions .secondary{font-size:.84rem}.std-widget{grid-template-columns:5rem 1.1rem 1.9rem 3rem}.std-widget .coefficient{width:5rem}.std-widget .exponent{width:3rem}.frac-widget{grid-template-columns:76px}.fraction-rule{width:76px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+@media print{body>*{display:none!important}#printHint{display:block!important;color:#000;padding:2cm;font-size:18pt}}
+</style>
+</head>
+<body>
+<header id="quizHeader"><nav class="bar" id="tabbar" role="tablist" aria-label="Question navigation"><button id="tab-q1" data-target="q1" role="tab" aria-controls="q1" aria-selected="false">Q1</button><button id="tab-q2" data-target="q2" role="tab" aria-controls="q2" aria-selected="false">Q2</button><button id="tab-q3" data-target="q3" role="tab" aria-controls="q3" aria-selected="false">Q3</button><button id="tab-q4" data-target="q4" role="tab" aria-controls="q4" aria-selected="false">Q4</button><button id="tab-q5" data-target="q5" role="tab" aria-controls="q5" aria-selected="false">Q5</button><button id="tab-q6" data-target="q6" role="tab" aria-controls="q6" aria-selected="false">Q6</button><button id="tab-q7" data-target="q7" role="tab" aria-controls="q7" aria-selected="false">Q7</button><button id="tab-q8" data-target="q8" role="tab" aria-controls="q8" aria-selected="false">Q8</button><button id="tab-q9" data-target="q9" role="tab" aria-controls="q9" aria-selected="false">Q9</button><button id="tab-q10" data-target="q10" role="tab" aria-controls="q10" aria-selected="false">Q10</button><button id="tab-q11" data-target="q11" role="tab" aria-controls="q11" aria-selected="false">Q11</button><button id="tab-q12" data-target="q12" role="tab" aria-controls="q12" aria-selected="false">Q12</button><button id="tab-q13" data-target="q13" role="tab" aria-controls="q13" aria-selected="false">Q13</button><button id="tab-q14" data-target="q14" role="tab" aria-controls="q14" aria-selected="false">Q14</button><button id="tab-q15" data-target="q15" role="tab" aria-controls="q15" aria-selected="false">Q15</button><button id="tab-results" data-target="results" role="tab" aria-controls="results" aria-selected="false">Results</button></nav></header>
+<aside id="uxside" aria-label="Display options and attempt controls">
+<div class="side-identity">Student number<strong id="studentDisplay">—</strong><div class="attempt-mini">Attempt <span id="attemptMini">—</span></div></div>
+<div class="sidebar-title">Overlay</div><div class="side-row"><button type="button" id="ovnoneBtn" class="side-button"><span class="swatch none"></span>None</button><button type="button" id="ovblueBtn" class="side-button"><span class="swatch blue"></span>Blue</button><button type="button" id="ovyellowBtn" class="side-button"><span class="swatch yellow"></span>Yellow</button></div>
+<div class="sidebar-title">Theme</div><div class="side-row"><button type="button" id="lightBtn" class="side-button">Light</button><button type="button" id="darkBtn" class="side-button">Dark</button></div>
+<div class="side-progress"><label id="progressText" for="progressBar">Ready to start</label><progress id="progressBar" value="0" max="67"></progress><span id="sessionStatus">No attempt started</span></div><button type="button" id="sideSubmit" class="primary side-submit" disabled>Submit &amp; mark</button>
+</aside>
+<main id="main">
+<div class="course-strip"><strong>GCSE Maths · Number</strong><span>Eduqas Foundation · 15 sections · 100 marks</span></div>
+<div id="storageWarning" class="notice" hidden>Your browser is blocking local storage. The quiz still works, but results or variation history may not survive a refresh. Download your results and any earned certificate before closing this page.</div>
+<div id="globalNotice" class="notice" role="status" hidden></div>
+<div id="questions"></div>
+<section id="results" class="page" role="tabpanel" aria-labelledby="tab-results">
+<h2 id="resultHeading" tabindex="-1">Results</h2>
+<div id="endedBanner" class="notice" role="status" hidden></div>
+<div class="result-top"><div class="score-card"><h3>Your score</h3><p>Student number: <strong id="resultStudent">—</strong></p><div class="score-line"><strong id="scoreValue">—</strong><span id="scoreTotal">/ 100</span></div><p id="percentage">Not submitted</p><p id="resultMeta" class="muted"></p></div><div class="action-card"><h3>Actions</h3><div class="actions"><button type="button" id="markAllBtn" class="primary" disabled>Submit &amp; mark all questions</button><button type="button" id="restartBtn" class="primary" hidden>Start a new attempt</button><button type="button" id="downloadResultsBtn" class="secondary" hidden>Download results (TXT)</button><button type="button" id="otherStudentBtn" class="secondary" hidden>Different student</button></div><p id="reviewNote" class="small muted"></p></div></div>
+<div id="masterySummary" hidden></div>
+<div id="certSection" class="qpanel certificate-panel" hidden><div class="qhead"><h3>Certificate of achievement · 90% or more</h3></div><div class="qbody"><p id="certMessage" class="small"></p><div class="actions"><button type="button" id="downloadCertBtn" class="btn">Download certificate (PNG)</button><button type="button" id="printCertBtn" class="secondary">Print certificate</button></div><p id="certError" class="error" role="status" hidden></p><img id="certPreview" alt="Certificate preview showing the student number, score, completion date and attempt reference"><canvas id="certCanvas" width="1800" height="1273" hidden></canvas></div></div>
+<div id="breakdownWrap" hidden><h3>Question breakdown</h3><div class="table-scroll"><table><thead><tr><th scope="col">Question / topic</th><th scope="col">Marks</th><th scope="col">Review</th></tr></thead><tbody id="breakdownBody"></tbody></table></div></div>
+<div id="historyWrap" hidden><h3>Earlier attempts for this student</h3><p class="small muted">Select an earlier attempt to reopen its results and any earned certificate. Records are kept in this browser tab; download the files for a permanent copy.</p><div id="historyList" class="history-list"></div></div>
+</section>
+<footer>Use pen and paper. No calculator. Question forms and numbers change between attempts. This is an independent classroom assessment, not an official Eduqas examination or qualification.</footer>
+</main>
+<div id="welcomeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" hidden><div class="modal-panel"><div class="eyebrow">GCSE Mathematics · Foundation</div><h1 id="welcomeTitle">Number skills assessment</h1><p>Work through the Number questions using <strong>pen and paper, without a calculator</strong>. Take care with signs, units, fractions and powers.</p><div class="modal-stat"><span>15 sections</span><span>100 marks</span><span>Fresh variants each attempt</span><span>Certificate at 90%+</span></div><p>Fractions must be in their <strong>simplest form</strong>. Put the numerator above the line and the denominator below it. Type exponents in the small raised boxes.</p><div class="intro-warning"><strong>Refreshing or leaving the page ends and marks the attempt.</strong> You can then review your results, download any earned certificate and start a fresh attempt.</div><form id="startForm" novalidate><label for="studentInput">Student number only</label><div class="start-row"><input id="studentInput" type="text" inputmode="numeric" pattern="[0-9]{1,20}" maxlength="20" placeholder="Enter your student number" autocomplete="off" spellcheck="false" aria-describedby="startError"><button id="startBtn" class="primary" type="submit">Start →</button></div><p id="startError" class="error" role="alert" hidden></p></form><p class="privacy-note">No name is requested. No information is uploaded. Results are kept in this browser tab; display preferences and recent question history are kept on this device. Download results before closing the tab.</p><div class="cancel-row"><button type="button" id="cancelWelcome" class="secondary" hidden>Return to results</button></div></div></div>
+<div id="confirmModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle" hidden><div class="modal-panel"><h3 id="confirmTitle">Submit this attempt?</h3><p id="confirmText"></p><div class="actions"><button id="confirmSubmit" type="button" class="primary">Submit &amp; mark</button><button id="cancelSubmit" type="button" class="secondary">Keep working</button></div></div></div>
+<div id="overlayTint" aria-hidden="true"></div><div id="printHint" hidden>Use “Print certificate” on the Results page to print an earned certificate.</div>
+<noscript><div style="position:fixed;inset:0;background:white;color:black;z-index:5000;padding:3rem">This assessment needs JavaScript. Enable it in your browser, then reopen this file.</div></noscript>
+<script>
+
+(() => {
+/* Number Engine v2.0.0. Pure, deterministic generators and exact marking.
+   Browser code is bundled into one HTML file; this source also runs in Node for QA. */
+const NumberEngine = (() => {
+'use strict';
+const VERSION = '2.0.0';
+const TITLES = ['Place value, ordering & comparison','Rounding & truncation','Add, subtract & order of operations','Multiply & divide numbers','Fractions of amounts, reverse fractions & ratio','Add & subtract fractions','Multiply, divide & reciprocals','Fractions, decimals & percentages','Estimation & checking answers','Units, error intervals & accuracy','Prime factors, HCF, LCM & systematic listing','Powers, roots & exact calculations','Laws of indices','Standard form — convert & compare','Standard form — calculate'];
+const MAXIMA = [7,4,6,6,6,6,6,10,5,10,10,6,6,6,6];
+const SPEC = [['FN1','FN2'],['FN15'],['FN2','FN3'],['FN2','FN3'],['FN11','FN12'],['FN2','FN8'],['FN2','FN3','FN8'],['FN10','FN12'],['FN14'],['FN13','FN15','FN16'],['FN4','FN5'],['FN3','FN6','FN7','FN8'],['FN6','FN7'],['FN9'],['FN9']];
+function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){const t=b;b=a%b;a=t;}return a;}
+function bgcd(a,b){a=a<0n?-a:a;b=b<0n?-b:b;while(b){const t=b;b=a%b;a=t;}return a;}
+function rat(n,d=1n){n=BigInt(n);d=BigInt(d);if(d===0n)throw new Error('Zero denominator');if(d<0n){n=-n;d=-d;}const g=bgcd(n,d);return {n:n/g,d:d/g};}
+function add(a,b){return rat(a.n*b.d+b.n*a.d,a.d*b.d);}
+function sub(a,b){return rat(a.n*b.d-b.n*a.d,a.d*b.d);}
+function mul(a,b){return rat(a.n*b.n,a.d*b.d);}
+function div(a,b){if(b.n===0n)throw new Error('Division by zero');return rat(a.n*b.d,a.d*b.n);}
+function pow(a,n){if(!Number.isInteger(n)||Math.abs(n)>20)throw new Error('Power outside safe range');return n>=0?rat(a.n**BigInt(n),a.d**BigInt(n)):rat(a.d**BigInt(-n),a.n**BigInt(-n));}
+function eq(a,b){return !!a&&!!b&&a.n*b.d===b.n*a.d;}
+function cmp(a,b){const z=a.n*b.d-b.n*a.d;return z<0n?-1:z>0n?1:0;}
+function key(a){return `${a.n}/${a.d}`;}
+function dec(a){let sign=a.n<0n?'-':'',n=a.n<0n?-a.n:a.n;let s=(n/a.d).toString(),r=n%a.d;if(r){s+='.';for(let i=0;r&&i<16;i++){r*=10n;s+=(r/a.d).toString();r%=a.d;}if(r)throw new Error('Non-terminating decimal');}return sign+s;}
+function cleanNumeric(raw){
+ let s=String(raw??'').trim().replace(/\u2212/g,'-');if(!s||s.length>80)return null;
+ if(s.includes(',')){if(!/^[+-]?\d{1,3}(?:,\d{3})+(?:\.\d+)?$/.test(s))return null;s=s.replace(/,/g,'');}
+ if(/[ \u00a0\u202f]/.test(s)){if(!/^[+-]?\d{1,3}(?:[ \u00a0\u202f]\d{3})+(?:\.\d+)?$/.test(s))return null;s=s.replace(/[ \u00a0\u202f]/g,'');}
+ return s;
+}
+function parseDecimal(raw){const s=cleanNumeric(raw);if(s===null||!/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(s))return null;const sign=s[0]==='-'?-1n:1n;const z=s.replace(/^[-+]/,'').split('.');const p=z[1]||'';if((z[0]+p).length>30||p.length>16)return null;try{return rat(sign*BigInt((z[0]||'0')+p),10n**BigInt(p.length));}catch{return null;}}
+function intInput(raw){const s=String(raw??'').trim().replace(/\u2212/g,'-');if(!/^[+-]?\d{1,12}$/.test(s))return null;return BigInt(s);}
+function roundStep(a,step){if(a.n<0n||step.n<=0n)throw new Error('Rounding expects non-negative data');const t=div(a,step);return mul(rat((2n*t.n+t.d)/(2n*t.d)),step);}
+function ten(e){return e>=0?rat(10n**BigInt(e)):rat(1n,10n**BigInt(-e));}
+function sf(a){if(a.n<=0n)throw new Error('Positive standard form only');let A=a,e=0;for(let i=0;i<30&&cmp(A,rat(10))>=0;i++){A=div(A,rat(10));e++;}for(let i=0;i<30&&cmp(A,rat(1))<0;i++){A=mul(A,rat(10));e--;}return [dec(A),String(e)];}
+function roundSF(a,n){const exponent=Number(sf(a)[1]);return roundStep(a,ten(exponent-n+1));}
+function rng(seed){let s=seed>>>0;function next(){s=(s+0x6D2B79F5)>>>0;let t=s;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296;}return {int:(a,b)=>{if(b<a)throw new Error('Empty integer range');return Math.floor(next()*(b-a+1))+a;},pick:a=>{if(!a.length)throw new Error('Empty candidate pool');return a[Math.floor(next()*a.length)];},shuffle:a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(next()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}};}
+function choose(R,f,ok,label='candidate'){for(let i=0;i<600;i++){const x=f();if(ok(x))return x;}throw new Error(`Unable to create a valid ${label}`);}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+const mn=n=>String(n).startsWith('-')?`<mrow><mo>−</mo><mn>${esc(String(n).slice(1))}</mn></mrow>`:`<mn>${esc(n)}</mn>`;
+const mo=o=>`<mo>${esc(o)}</mo>`;
+const math=s=>`<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" displaystyle="true"><mrow>${s}</mrow></math>`;
+const fraction=a=>`${a.n<0n?mo('−'):''}<mfrac>${mn(a.n<0n?-a.n:a.n)}${mn(a.d)}</mfrac>`;
+const power=(b,e)=>`<msup>${Number(b)<0?`<mrow>${mo('(')}${mn(b)}${mo(')')}</mrow>`:mn(b)}${mn(e)}</msup>`;
+const standard=(a,e)=>`${mn(a)}${mo('×')}${power(10,e)}`;
+const root=(n,k=2)=>k===2?`<msqrt>${mn(n)}</msqrt>`:`<mroot>${mn(n)}${mn(k)}</mroot>`;
+function mixed(a){const sg=a.n<0n?-1n:1n,n=a.n*sg,w=n/a.d,r=n%a.d;if(!w)return fraction(a);if(!r)return mn(a.n/a.d);return `${sg<0n?mo('−'):''}<mrow>${mn(w)}<mspace width="0.2em"/>${fraction(rat(r,a.d))}</mrow>`;}
+const operand=a=>a.n<0n?`<mrow>${mo('(')}${fraction(a)}${mo(')')}</mrow>`:fraction(a);
+const numField=(id,target,max=1,label='Answer',extra={})=>({id,kind:'number',target:typeof target==='object'?dec(target):String(target),max,label,...extra});
+const fracField=(id,target,max=2,label='Answer',extra={})=>({id,kind:'fraction',target:[target.n.toString(),target.d.toString()],max,label,...extra});
+const sfField=(id,value,max=2)=>({id,kind:'standard',target:sf(value),max,label:'Standard form'});
+const selectField=(id,target,options,max=1,label='Choose')=>({id,kind:'select',target:String(target),options:options.map(x=>typeof x==='string'?{value:x,label:x}:x),max,label});
+const textField=(id,kind,target,max,label)=>({id,kind,target,max,label});
+function part(label,prompt,fields,note='',template=''){return {label,prompt,fields,note,template};}
+function niceFrac(R,{mixedNumber=false,negative=false,denoms=[3,4,5,6,8,10,12]}={}){const d=R.pick(denoms),ns=Array.from({length:d-1},(_,i)=>i+1).filter(n=>gcd(n,d)===1);let n=R.pick(ns);if(mixedNumber)n+=d*R.int(1,3);if(negative)n=-n;return rat(n,d);}
+const prime=n=>Number.isInteger(n)&&n>=2&&!Array.from({length:Math.max(0,Math.floor(Math.sqrt(n))-1)},(_,i)=>i+2).some(x=>n%x===0);
+function primeMap(n){const out={};for(let p=2;p*p<=n;p++)while(n%p===0){out[p]=(out[p]||0)+1;n/=p;}if(n>1)out[n]=(out[n]||0)+1;return out;}
+function primeText(m){return Object.entries(m).map(([p,e])=>e===1?p:`${p}^${e}`).join(' × ');}
+function parsePrime(raw){let s=String(raw??'').trim();if(!s||s.length>140)return null;const sup={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9'};s=s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g,m=>'^'+[...m].map(c=>sup[c]).join('')).replace(/[xX×·]/g,'*').replace(/\s+/g,'');const parts=s.split('*'),map={};if(parts.length>24)return null;for(const z of parts){const m=/^(\d{1,3})(?:\^(\d{1,2}))?$/.exec(z);if(!m)return null;const p=Number(m[1]),e=m[2]?Number(m[2]):1;if(!prime(p)||e<1||e>12)return null;map[p]=(map[p]||0)+e;}return map;}
+function mapEqual(a,b){return a&&Object.keys(a).length===Object.keys(b).length&&Object.entries(b).every(([p,e])=>a[p]===e);}
+
+const generators=[];
+// Q1: place value, genuinely different ordering forms, and comparison.
+generators[0]=(R,v)=>{
+ const out=[];const digit=R.int(2,9),place=v%2===0?-R.int(1,5):R.int(1,4);let display;
+ if(place<0){const len=Math.max(-place+1,4);const ds=Array.from({length:len},()=>R.pick([0,1,2,3,4,5,6,7,8,9].filter(d=>d!==digit)));ds[-place-1]=digit;ds[len-1]=R.pick([1,2,3,4,5,6,7,8,9].filter(d=>d!==digit));display=`${R.pick([0,1])}.${ds.join('')}`;}
+ else{const len=6,ds=Array.from({length:len},()=>R.pick([0,1,2,3,4,5,6,7,8,9].filter(d=>d!==digit)));ds[0]=R.pick([1,2,3,4,5,6,7,8,9].filter(d=>d!==digit));ds[len-place-1]=digit;display=ds.join('');}
+ out.push(part('a',`What is the <strong>value</strong> of the digit <strong>${digit}</strong> in ${math(mn(display))}?`,[numField('q1a',mul(rat(digit),ten(place)))],'Enter the value, not the name of the place.'));
+ const ds=R.shuffle([1,2,3,4,5,6,7,8,9]).slice(0,3);if(v===2)ds[1]=0;
+ const exps=v<2?[-1,-2,-3]:[2,1,0];const value=exps.reduce((a,e,i)=>add(a,mul(rat(ds[i]),ten(e))),rat(0));
+ const fs=ds.map((d,i)=>numField(`q1b${i}`,d,1,['First digit','Second digit','Third digit'][i]));
+ out.push(part('b',`Complete this place-value expansion of ${math(mn(dec(value)))}.`,fs,'',fs.map((f,i)=>`[[${f.id}]] <span>× ${dec(ten(exps[i]))}</span>`).join(' <span>+</span> ')));
+ const vals=choose(R,()=>{
+  if(v%2===0){const a=R.int(2,8);return [rat(-a,10),rat(-(a*10+R.int(1,8)),100),rat(a,100),rat(a,10)];}
+  return [niceFrac(R,{negative:true,denoms:[4,5,8,10,20]}),niceFrac(R,{denoms:[4,5,8,10,20]}),rat(R.int(12,89),100),rat(-R.int(12,89),100)];
+ },a=>new Set(a.map(key)).size===4,'ordering set');
+ const shuffled=R.shuffle(vals),labels=['A','B','C','D'],dir=v>=2?'largest to smallest':'smallest to largest';const sign=v>=2?-1:1;
+ const shown=shuffled.map((a,i)=>`<span class="number-card"><strong>${labels[i]}:</strong> ${math(v%2&&i%2===0?fraction(a):mn(dec(a)))}</span>`).join('');
+ const order=shuffled.map((a,i)=>({a,id:labels[i]})).sort((a,b)=>sign*cmp(a.a,b.a)).map(x=>x.id);
+ out.push(part('c',`Put these numbers in order, from <strong>${dir}</strong>.<div class="number-cards">${shown}</div>`,[textField('q1c','order',order,2,'Letters in order')],'Type the four letters separated by commas, for example D, B, A, C.'));
+ const a=niceFrac(R,{negative:v>=2,denoms:[4,5,8,10]}),delta=rat(R.pick([-3,-2,-1,1,2,3]),100),b=add(a,delta),rel=cmp(a,b)<0?'<':'>';
+ out.push(part('d',`Complete the comparison using <strong>&lt;</strong>, <strong>=</strong> or <strong>&gt;</strong>.`,[selectField('q1d',rel,['<','=','>'])],'',`${math(v%2?fraction(a):mn(dec(a)))} [[q1d]] ${math(mn(dec(b)))}`));
+ return out;
+};
+// Q2: decimal-safe rounding, significant figures and truncation.
+generators[1]=(R,v)=>{
+ const step=R.pick([10,100,1000]),n=choose(R,()=>R.int(1234,98765),x=>x%step!==0);const dp=R.pick([1,2]),decimal=rat(R.int(1021,9899)*10+R.int(1,9),10000);
+ const sfCount=R.pick([1,2,3]);const sig=choose(R,()=>mul(rat(R.int(1231,9879)),ten(v%2?-R.int(5,7):R.int(-1,2))),x=>!eq(x,roundSF(x,sfCount)));
+ const td=R.pick([1,2]),tv=rat(R.int(102,789)*10+R.int(5,9),1000),scale=ten(td),trunc=div(rat(mul(tv,scale).n/mul(tv,scale).d),scale);
+ return [part('a',v<2?`Round ${math(mn(n))} to the nearest <strong>${step.toLocaleString('en-GB')}</strong>.`:`A stadium records ${math(mn(n))} visitors. Round this to the nearest <strong>${step.toLocaleString('en-GB')}</strong>.`,[numField('q2a',roundStep(rat(n),rat(step)))]),part('b',`Round ${math(mn(dec(decimal)))} to <strong>${dp} decimal place${dp===1?'':'s'}</strong>.`,[numField('q2b',roundStep(decimal,ten(-dp)))]),part('c',`Round ${math(mn(dec(sig)))} to <strong>${sfCount} significant figure${sfCount===1?'':'s'}</strong>.`,[numField('q2c',roundSF(sig,sfCount))]),part('d',`Truncate ${math(mn(dec(tv)))} to <strong>${td} decimal place${td===1?'':'s'}</strong>.`,[numField('q2d',trunc)],'Truncate means cut off the remaining digits; do not round.')];
+};
+// Q3: signed decimals, formal arithmetic and four distinct order-of-operation templates.
+generators[2]=(R,v)=>{
+ const x=R.int(3214,9876),y=R.int(1027,2989),a=v%2?add(rat(x),rat(y)):sub(rat(x),rat(y));
+ let p1=v%2?`Work out ${math(mn(x)+mo('+')+mn(y))}.`:`Work out ${math(mn(x)+mo('−')+mn(y))}.`;
+ if(v===3)p1=`A college has ${x} books and receives ${y} more. How many books does it have now?`;
+ const d1=rat(-R.int(21,95),10),d2=choose(R,()=>rat(R.int(111,899),100),t=>add(d1,t).n!==0n),op=v%2?'−':'+';const signed=op==='−'?sub(d1,d2):add(d1,d2);
+ let p2=`Work out ${math(mn(dec(d1))+mo(op)+mn(dec(d2)))}.`;
+ if(v===2)p2=`The temperature is ${dec(d1)} °C. It rises by ${dec(d2)} °C. What is the new temperature?`;
+ if(v===3)p2=`Work out ${math(mn(dec(d2))+mo('−')+mo('(')+mn(dec(d1))+mo(')'))}.`;
+ const signedAns=v===3?sub(d2,d1):signed;
+ const b=R.int(3,8),c=R.int(2,7),d=R.int(2,5),k=R.int(2,6);let expr,ans;
+ if(v===0){expr=mn(b)+mo('+')+mn(c)+mo('×')+power(d,2);ans=b+c*d*d;}
+ if(v===1){expr=mo('(')+mn(b+c)+mo('−')+mn(b)+mo(')')+mo('×')+power(d,2);ans=c*d*d;}
+ if(v===2){expr=mn(b*c*k)+mo('÷')+mo('(')+mn(b)+mo('×')+mn(c)+mo(')')+mo('+')+power(d,2);ans=k+d*d;}
+ if(v===3){expr=power(b,2)+mo('−')+mn(c*d)+mo('÷')+mn(d);ans=b*b-c;}
+ return [part('a',p1,[numField('q3a',a,2)],'Use a written method on paper.'),part('b',p2,[numField('q3b',signedAns,2)]),part('c',`Work out ${math(expr)}.`,[numField('q3c',ans,2)],'Use the correct order of operations.')];
+};
+// Q4: no multiply-by-one or self-division shortcuts; exact finite decimal quotients.
+generators[3]=(R,v)=>{
+ const m=R.int(213,487),n=R.int(13,38),left=v%2?rat(m,10):rat(m);const pa=v===2?`There are ${m} packs, each containing ${n} cards. How many cards are there altogether?`:`Work out ${math(mn(dec(left))+mo('×')+mn(n))}.`;
+ const divisor=v<2?rat(R.pick([6,8,12,15,16,24])):rat(R.pick([12,15,24,25]),10),q=rat(R.int(123,687),10),dividend=mul(divisor,q);
+ const a=R.int(3,12),b=R.int(3,9),neg1=v!==1,neg2=v>=2;let ex,answer;
+ if(v%2===0){ex=mo('(')+mn(neg1?-a:a)+mo(')')+mo('×')+mo('(')+mn(neg2?-b:b)+mo(')');answer=(neg1?-a:a)*(neg2?-b:b);}
+ else{ex=mn(-a*b)+mo('÷')+mo('(')+mn(neg2?-b:b)+mo(')');answer=(-a*b)/(neg2?-b:b);}
+ return [part('a',pa,[numField('q4a',mul(left,rat(n)),2)]),part('b',`Work out ${math(mn(dec(dividend))+mo('÷')+mn(dec(divisor)))}.`,[numField('q4b',q,2)]),part('c',`Work out ${math(ex)}.`,[numField('q4c',answer,2)])];
+};
+// Q5: all attempts contain forward, reverse, and fraction-in-ratio evidence.
+generators[4]=(R,v)=>{
+ const f=niceFrac(R,{denoms:[5,6,7,8,9,10,12]}),k=R.int(12,46),whole=Number(f.d)*k;
+ let ans=mul(f,rat(whole)),prompt=`Find ${math(fraction(f))} of ${whole}.`;
+ if(v>=2){ans=sub(rat(whole),ans);prompt=`A club has ${whole} members. ${math(fraction(f))} of them are adults. How many members are <strong>not adults</strong>?`;}
+ else if(v===1)prompt=`A tank holds ${whole} litres when full. It is ${math(fraction(f))} full. How many litres are in the tank?`;
+ const g=choose(R,()=>niceFrac(R,{denoms:[5,6,7,8,9,10,12]}),g=>!eq(g,f));const unit=choose(R,()=>R.int(12,49),u=>Number(g.d)*u!==whole&&Number(g.d)*u!==Number(ans.n/ans.d));const total=Number(g.d)*unit,known=Number(g.n)*unit;
+ const reverse=v%2?`After some tickets are sold, ${math(fraction(g))} of the tickets remain. There are ${known} tickets remaining. How many tickets were there originally?`:`${math(fraction(g))} of a number is ${known}. Find the original number.`;
+ const r=R.int(2,8),s=R.pick([2,3,4,5,6,7,8,9].filter(x=>x!==r)),first=v<2,rf=rat(first?r:s,r+s);
+ return [part('a',prompt,[numField('q5a',ans,2)]),part('b',reverse,[numField('q5b',total,2)]),part('c',`Red and blue counters are in the ratio <strong>${r} : ${s}</strong>. What fraction of <strong>all</strong> the counters are ${first?'red':'blue'}?`,[fracField('q5c',rf,2)],'Give a fraction in simplest form.')];
+};
+// Q6: non-zero, non-integer, distinct answers; non-identical denominators; mixed numbers every time.
+generators[5]=(R,v)=>{
+ const rows=[],used=new Set();
+ for(let i=0;i<3;i++){
+  const candidate=choose(R,()=>{
+   let a=niceFrac(R,{mixedNumber:i===2||v===1&&i===0,negative:v===2&&i===1});let b=niceFrac(R,{mixedNumber:i===2,negative:v===3&&i===1});const op=i===0?'+':i===1?'−':v%2?'−':'+';
+   if(i===1&&v<2&&cmp(a,b)<0)[a,b]=[b,a];const c=op==='+'?add(a,b):sub(a,b);return {a,b,op,c};
+  },o=>o.a.d!==o.b.d&&!eq(o.a,o.b)&&o.c.n!==0n&&o.c.d>1n&&o.c.d<=120n&&!used.has(key(v===3&&i===0?o.b:o.c)),'fraction addition/subtraction');
+  const {a,b,op,c}=candidate;used.add(key(v===3&&i===0?b:c));const fmt=x=>i===2?mixed(x):operand(x);let target=c,prompt=`Work out ${math(fmt(a)+mo(op)+fmt(b))}.`;
+  if(v===3&&i===0){prompt=`Find the missing fraction: ${math(operand(a)+mo('+')+mo('□')+mo('=')+fraction(c))}.`;target=b;}
+  if(v===2&&i===0)prompt=`A ribbon is ${math(fraction(a))} m long. Another ribbon is ${math(fraction(b))} m long. Find their total length in metres.`;
+  rows.push(part(String.fromCharCode(97+i),prompt,[fracField(`q6${String.fromCharCode(97+i)}`,target,2)],i===2?'Give your answer as a simplest-form fraction. An improper fraction is allowed.':'Give your answer in simplest form.'));
+ }
+ return rows;
+};
+// Q7: operands cannot cancel to 0 or 1; reciprocal is intentionally a distinct skill.
+generators[6]=(R,v)=>{
+ const rows=[],used=new Set();
+ for(let i=0;i<2;i++){
+  const o=choose(R,()=>{const a=niceFrac(R,{mixedNumber:v===1||v===3&&i===0,negative:(v===2||v===3)&&i===0}),b=niceFrac(R,{mixedNumber:v===3,negative:v===2&&i===1});return {a,b,c:i===0?mul(a,b):div(a,b)};},o=>!eq(o.a,o.b)&&o.c.n!==0n&&o.c.d>1n&&o.c.d<=120n&&(o.c.n<0n?-o.c.n:o.c.n)<=200n&&!used.has(key(o.c))&&o.a.d!==o.b.d,'fraction multiplication/division');
+  used.add(key(o.c));const fmt=x=>v===1||v===3?mixed(x):operand(x);let prompt=`Work out ${math(fmt(o.a)+mo(i?'÷':'×')+fmt(o.b))}.`;
+  if(v===0&&i===1)prompt=`A length of ribbon is ${math(fraction(o.a))} m. Each equal piece is ${math(fraction(o.b))} m. Work out the number of piece-lengths in the ribbon, as an exact fraction.`;
+  rows.push(part(i?'b':'a',prompt,[fracField(`q7${i?'b':'a'}`,o.c,2)],'Give a simplest-form fraction; an improper fraction is allowed.'));
+ }
+ const f=choose(R,()=>niceFrac(R,{mixedNumber:v%2===1,negative:v===2,denoms:[3,4,5,6,7,8,9]}),f=>!used.has(key(div(rat(1),f))));
+ rows.push(part('c',`Write the <strong>reciprocal</strong> of ${math(v%2?mixed(f):fraction(f))}.`,[fracField('q7c',div(rat(1),f),2)],'Give a fraction in simplest form.'));
+ return rows;
+};
+// Q8: exact percentages, including fractional results; no rounded-to-integer answer bug.
+generators[7]=(R,v)=>{
+ const pool=[];for(const d of [4,5,8,10,20,25,40,50,100])for(let n=1;n<d;n++)if(gcd(n,d)===1)pool.push(rat(n,d));
+ const a0=R.pick(pool),a=v>=2?add(a0,rat(1)):a0;const b=R.pick(pool.filter(x=>!eq(x,a0))),c=R.pick(pool.filter(x=>!eq(x,a0)&&!eq(x,b)));
+ const p=R.pick([12,15,18,22,25,32,35,45,65,75]),amount=choose(R,()=>R.int(12,89)*5,x=>x!==100&&(!Number.isInteger(x*p/100)||v%2===0));
+ const base=R.pick([45,65,85,125,145,165,185,225]),change=R.pick([12,15,20,25,30,35]),increase=v%2===0,changed=mul(rat(base),rat(100+(increase?change:-change),100));
+ const original=R.pick([60,80,120,140,160,180,220,240]),rate=R.pick([10,15,20,25,30,40]),up=v>=2,final=mul(rat(original),rat(100+(up?rate:-rate),100));
+ return [part('a',`Write ${math(mn(dec(a)))} as a fraction in simplest form <strong>and</strong> as a percentage.`,[fracField('q8af',a,1,'Fraction'),numField('q8ap',mul(a,rat(100)),1,'Percentage',{unit:'%'})]),part('b',`Write ${math(fraction(b))} as a decimal.`,[numField('q8b',b)]),part('c',`Write <strong>${dec(mul(c,rat(100)))}%</strong> as a fraction in simplest form.`,[fracField('q8c',c,1)]),part('d',`Find <strong>${p}%</strong> of <strong>${amount}</strong>.`,[numField('q8d',rat(p*amount,100),2)],'Do not round your answer.'),part('e',`A price is £${base}. It is ${increase?'increased':'reduced'} by ${change}%. Find the new price.`,[numField('q8e',changed,2,'New price',{prefix:'£'})]),part('f',`After a ${rate}% ${up?'increase':'reduction'}, a price is £${dec(final)}. What was the <strong>original price</strong>?`,[numField('q8f',original,2,'Original price',{prefix:'£'})])];
+};
+// Q9: 1 s.f. estimation and a separate plausibility judgement.
+generators[8]=(R,v)=>{
+ const op=v%2?'÷':'×';
+ const o=choose(R,()=>{const a=rat(R.int(321,879),10),b=rat(R.int(21,79),10);const ra=roundSF(a,1),rb=roundSF(b,1);const exact=op==='×'?mul(a,b):div(a,b),est=op==='×'?mul(ra,rb):div(ra,rb);return {a,b,ra,rb,exact,est};},x=>{try{dec(x.exact);dec(x.est);}catch{return false;}const ratio=Number(x.exact.n)/Number(x.exact.d)/(Number(x.est.n)/Number(x.est.d));return !eq(x.a,x.ra)&&!eq(x.b,x.rb)&&ratio>0.8&&ratio<1.25;},'estimation');
+ const mode=R.pick([0,1,2]),claim=mul(o.exact,mode===0?rat(1):mode===1?rat(10):rat(1,10));
+ const opts=[{value:'close',label:'Close to my estimate.'},{value:'ten',label:'About 10 × my estimate.'},{value:'tenth',label:'About 0.1 × my estimate.'}];
+ return [part('a',`Round <strong>each number to 1 significant figure</strong>, then estimate ${math(mn(dec(o.a))+mo(op)+mn(dec(o.b)))}.`,[numField('q9r1',o.ra,1,'First rounded number'),numField('q9r2',o.rb,1,'Second rounded number'),numField('q9est',o.est,1,'Estimate')],'',`[[q9r1]] <span>${op}</span> [[q9r2]] <span>=</span> [[q9est]]`),part('b',`A student gives <strong>${dec(claim)}</strong> as the exact answer to the original calculation. Does the size of this answer look reasonable?`,[selectField('q9check',mode===0?'yes':'no',[{value:'yes',label:'Yes'},{value:'no',label:'No'}],1,'Reasonable?'),selectField('q9reason',opts[mode].value,R.shuffle(opts),1,'Reason')],'Use your estimate, not a second exact calculation.')];
+};
+// Q10: unit directions change; both interval inequalities must be chosen, never supplied as answers.
+generators[9]=(R,v)=>{
+ const out=[];const mass=rat(R.int(123,875),100),massG=mul(mass,rat(1000));
+ out.push(part('a',v%2?`Convert ${dec(massG)} g to kilograms.`:`Convert ${dec(mass)} kg to grams.`,[numField('q10a',v%2?mass:massG,1,'Answer',{unit:v%2?'kg':'g'})]));
+ const length=rat(R.int(124,875),100),scaled=mul(length,rat(v<2?100:1000));
+ out.push(part('b',v%2?`Convert ${dec(scaled)} ${v<2?'cm':'mm'} to metres.`:`Convert ${dec(length)} m to ${v<2?'centimetres':'millimetres'}.`,[numField('q10b',v%2?length:scaled,1,'Answer',{unit:v%2?'m':v<2?'cm':'mm'})]));
+ if(v<2){const h=rat(R.int(1,4)*4+R.pick([1,2,3]),4);out.push(part('c',v===0?`Convert ${dec(h)} hours to minutes.`:`A journey lasts ${dec(mul(h,rat(60)))} minutes. Write its duration in hours as a decimal.`,[numField('q10c',v===0?mul(h,rat(60)):h,2,'Answer',{unit:v===0?'minutes':'hours'})]));}
+ else{const hours=rat(R.pick([3,5,7]),2),speed=R.int(8,24)*2,dist=mul(hours,rat(speed));out.push(part('c',`A cyclist travels ${dec(dist)} km in ${dec(hours)} hours. Find the average speed in km/h.`,[numField('q10c',speed,2,'Average speed',{unit:'km/h'})],'Average speed = distance ÷ time.'));}
+ const precision=v===1||v===3?rat(1):rat(1,10),measured=mul(rat(R.int(25,189)),precision),truncated=v>=2;const low=truncated?measured:sub(measured,div(precision,rat(2))),high=truncated?add(measured,precision):add(measured,div(precision,rat(2)));
+ const symbolOptions=['<','≤','>','≥'];
+ out.push(part('d',`A positive length is recorded as <strong>${dec(measured)} m</strong>, ${truncated?`truncated to ${v===3?'a whole number of metres':'1 decimal place'}`:`rounded to the nearest ${dec(precision)} m`}. Complete the error interval for its actual length ${math('<mi>x</mi>')}.`,[numField('q10lo',low,1,'Lower limit'),selectField('q10ls','≤',symbolOptions,1,'Left inequality'),selectField('q10rs','<',symbolOptions,1,'Right inequality'),numField('q10hi',high,1,'Upper limit')],'Enter numbers and choose both inequality signs.',`[[q10lo]] [[q10ls]] ${math('<mi>x</mi>')} [[q10rs]] [[q10hi]] <span>m</span>`));
+ const step=R.pick([10,100]),record=R.int(12,49)*step,maximum=v%2===0;const bound=maximum?record+step/2-1:record-step/2;
+ out.push(part('e',`A parcel's mass is <strong>${record} g</strong> to the nearest <strong>${step} g</strong>. Its actual mass is a whole number of grams. What is the <strong>${maximum?'greatest':'smallest'} possible</strong> actual mass?`,[numField('q10e',bound,2,'Mass',{unit:'g'})]));
+ return out;
+};
+const PAIRS=[];
+for(let a=24;a<=120;a++)for(let b=a+1;b<=120;b++){const g=gcd(a,b);if(!prime(a)&&!prime(b)&&g>1&&b%a!==0&&a/g*b<=600&&Object.keys(primeMap(a)).every(p=>+p<=11)&&Object.keys(primeMap(b)).every(p=>+p<=11))PAIRS.push([a,b]);}
+// Q11: non-identical, non-nested composite pairs; all outcomes, not only their count.
+generators[10]=(R,v)=>{
+ let [a,b]=R.pick(PAIRS);if(v%2)[a,b]=[b,a];const g=gcd(a,b),l=a/g*b;const primes=[11,13,17,19,23,29,31,37,41,43],p=R.pick(primes),options=R.shuffle([p,1,R.pick([21,27,33,39,49]),R.pick([51,57,69,77,87])]).map(String);
+ const digits=v===1?R.shuffle([R.pick([2,4,6,8]),R.pick([2,4,6,8]),R.pick([1,3,5,7,9])]):v===3?R.shuffle([R.pick([1,3,5,7,9]),R.pick([1,3,5,7,9]),R.pick([2,4,6,8])]):R.shuffle([1,2,3,4,5,6,7,8,9]).slice(0,3);
+ if(new Set(digits).size<3){const sameParity=digits.filter((d,i)=>digits.indexOf(d)!==i)[0];const at=digits.lastIndexOf(sameParity);digits[at]=R.pick([1,2,3,4,5,6,7,8,9].filter(d=>d%2===sameParity%2&&!digits.includes(d)));}
+ const allowRepeat=v===2,parity=v===1?0:v===3?1:null,answers=[];for(const x of digits)for(const y of digits)if((allowRepeat||x!==y)&&(parity===null||y%2===parity))answers.push(10*x+y);answers.sort((a,b)=>a-b);
+ const rule=parity===null?'two-digit numbers':parity===0?'two-digit even numbers':'two-digit odd numbers';
+ return [part('a',`Write <strong>${a}</strong> as a product of prime factors.`,[{id:'q11a',kind:'prime',target:primeMap(a),max:2,label:'Prime factors'}],'Use × or x between factors. Powers such as 2^3 or 2³ are accepted.'),part('b',`Write <strong>${b}</strong> as a product of prime factors.`,[{id:'q11b',kind:'prime',target:primeMap(b),max:2,label:'Prime factors'}]),part('c',v<2?`Find the highest common factor (HCF) of <strong>${a}</strong> and <strong>${b}</strong>.`:`There are ${a} red counters and ${b} blue counters. All are shared into identical bags. What is the greatest possible number of bags?`,[numField('q11c',g)]),part('d',v<2?`Find the lowest common multiple (LCM) of <strong>${a}</strong> and <strong>${b}</strong>.`:`Two lights flash every ${a} seconds and ${b} seconds. They flash together now. After how many seconds will they next flash together?`,[numField('q11d',l)]),part('e','Which of these numbers is prime?',[selectField('q11e',p,options)]),part('f',`Use the digits <strong>${digits.join(', ')}</strong> to make ${rule}. <strong>${allowRepeat?'A digit may be repeated.':'Do not repeat a digit within a number.'}</strong> List <strong>all</strong> the possible numbers.`,[textField('q11f','set',answers,3,'All possible numbers')],'Separate your numbers with commas. The order of your list does not matter.')];
+};
+// Q12: square, cube and other positive powers; π kept exact, never approximated.
+generators[11]=(R,v)=>{
+ const b=R.pick([2,3,4,5]),e=b===2?R.int(4,7):b===3?R.int(3,4):R.int(2,3),degree=v===2?4:v===3?5:2,s=R.pick((degree===2?Array.from({length:12},(_,i)=>i+8):[2,3,4,5]).filter(k=>k!==b**e)),c=R.pick([3,4,5,6,7,8].filter(k=>k!==s)),cube=v%2?-c*c*c:c*c*c;
+ const r=R.int(4,11),z=R.int(2,6),expr=v<2?root(r*r)+mo('+')+mn(z)+mo('×')+mn(3):mo('(')+root(r*r)+mo('+')+mn(z)+mo(')')+mo('×')+mn(3),ans=v<2?r+z*3:(r+z)*3;
+ const piCase=choose(R,()=>{const a=R.int(4,15),b=R.int(2,a-1),d=R.int(2,8);const n=v%2?a-b:a+b;return {a,b,d,k:rat(n,d)};},x=>x.k.d>1n&&x.k.n>1n);
+ const piExpr=mo('(')+mn(piCase.a)+'<mi>π</mi>'+mo(v%2?'−':'+')+mn(piCase.b)+'<mi>π</mi>'+mo(')')+mo('÷')+mn(piCase.d);
+ return [part('a',`Evaluate ${math(power(b,e))}.`,[numField('q12a',b**e)]),part('b',`Evaluate ${math(root(s**degree,degree))}.`,[numField('q12b',s)]),part('c',`Evaluate ${math(root(cube,3))}.`,[numField('q12c',v%2?-c:c)]),part('d',`Work out ${math(expr)}.`,[numField('q12d',ans)]),part('e',`Work out ${math(piExpr)}. Give an <strong>exact</strong> answer as a multiple of ${math('<mi>π</mi>')}.`,[fracField('q12e',piCase.k,2,'Coefficient of π',{unit:'π'})],'Write the coefficient as a fraction in simplest form. Do not replace π with a decimal.')];
+};
+// Q13: zero and negative indices are intentional concept checks, not accidental trivialities.
+generators[12]=(R,v)=>{
+ const b=R.int(2,8),p=R.int(3,7),q=R.int(2,6),r=R.int(1,p+q-2);const n=p+q-r;
+ const expr=v===2?`<mfrac><mrow>${power(b,p)+mo('×')+power(b,q)}</mrow>${power(b,r)}</mfrac>`:v%2?power(b,p)+mo('÷')+power(b,r)+mo('×')+power(b,q):power(b,p)+mo('×')+power(b,q)+mo('÷')+power(b,r);
+ const base=R.pick([2,3,4,5,6,7,8,9].filter(x=>x!==b)),x=R.int(2,5),y=R.int(2,4),z=R.pick(Array.from({length:x*y-2},(_,i)=>i+1).filter(k=>x*y-k!==n)),e=x*y-z;
+ const nested=mo('(')+power(base,x)+mo(')');const nestedPow=`<msup><mrow>${nested}</mrow>${mn(y)}</msup>`;
+ const nb=R.pick([2,3,4,5]),ne=R.pick([1,2,3]),zb=R.int(2,17);
+ return [part('a',`Write ${math(expr)} as a single power of <strong>${b}</strong>.`,[{id:'q13a',kind:'power',base:b,target:String(n),max:2,label:'Exponent'}]),part('b',v===3?`Find the missing power of <strong>${base}</strong>: ${math(power(base,z)+mo('×')+mo('□')+mo('=')+nestedPow)}.`:`Write ${math(nestedPow+mo('÷')+power(base,z))} as a single power of <strong>${base}</strong>.`,[{id:'q13b',kind:'power',base,target:String(e),max:2,label:'Exponent'}]),part('c',`Evaluate ${math(power(nb,-ne))}.`,[fracField('q13c',rat(1,nb**ne),1)],'Give a fraction in simplest form.'),part('d',`Evaluate ${math(power(v%2?-zb:zb,0))}.`,[numField('q13d',1)])];
+};
+// Q14: comparisons where the coefficient alone gives the wrong ordering.
+generators[13]=(R,v)=>{
+ const coefficient=rat(R.int(12,98),10),exp=(v%2?-1:1)*R.int(3,6),value=mul(coefficient,ten(exp));const a2=rat(R.int(111,987),100),e2=(v%2?1:-1)*R.int(2,5),ordinary=mul(a2,ten(e2));
+ const c1=rat(R.int(12,34),10),c2=rat(R.int(65,98),10),pe=R.pick([-5,-4,-3,2,3,4]),larger=mul(c1,ten(pe+1)),smaller=mul(c2,ten(pe));const left=v<2?larger:smaller,right=v<2?smaller:larger;
+ return [part('a',`Write ${math(mn(dec(value)))} in standard form.`,[sfField('q14a',value)]),part('b',`Write ${math(standard(dec(a2),e2))} as an ordinary number.`,[numField('q14b',ordinary,2)]),part('c',`Compare the two numbers, then write the <strong>larger</strong> number as an ordinary number.`,[selectField('q14rel',cmp(left,right)>0?'>':'<',['<','=','>'],1,'Comparison'),numField('q14big',larger,1,'Larger ordinary number')],'',`${math(standard(...sf(left)))} [[q14rel]] ${math(standard(...sf(right)))} <span class="answer-break"></span> <span>Larger number:</span> [[q14big]]`)];
+};
+// Q15: every multiplication requires normalisation; division is terminating; unlike exponents in addition.
+generators[14]=(R,v)=>{
+ const a=R.int(4,9),b=R.int(3,9),p=R.int(2,5)*(v<2?1:-1),q=R.int(1,4)*(v%2?1:-1),va=mul(mul(rat(a),ten(p)),mul(rat(b),ten(q)));
+ const d=R.pick([2,4,5]),c=R.pick([2,3,4,5,6,7,8,9].filter(x=>x!==d)),p2=R.int(3,6)*(v%2?-1:1),q2=R.int(1,3)*(v<2?1:-1),vb=div(mul(rat(c),ten(p2)),mul(rat(d),ten(q2)));
+ const c1=R.int(2,8),c2=R.int(2,9),r=R.pick([-4,-3,-2,2,3,4,5]),s=r-(v<2?1:2),plus=v%2===0;
+ const left=mul(rat(c1),ten(r)),right=mul(rat(c2),ten(s)),vc=plus?add(left,right):sub(left,right);
+ const wrapped=(x,e)=>mo('(')+standard(x,e)+mo(')');
+ return [part('a',`Calculate ${math(wrapped(a,p)+mo('×')+wrapped(b,q))}.`,[sfField('q15a',va)],'Give your answer in standard form.'),part('b',`Calculate ${math(wrapped(c,p2)+mo('÷')+wrapped(d,q2))}.`,[sfField('q15b',vb)],'Give your answer in standard form.'),part('c',`Calculate ${math(wrapped(c1,r)+mo(plus?'+':'−')+wrapped(c2,s))}.`,[sfField('q15c',vc)],'Give your answer in standard form.')];
+};
+function section(index,seed,variant){
+ if(!Number.isInteger(index)||index<0||index>=15||!Number.isInteger(variant)||variant<0||variant>3)throw new Error('Invalid section plan');
+ const parts=generators[index](rng(seed),variant),max=parts.flatMap(p=>p.fields).reduce((s,f)=>s+f.max,0);
+ if(max!==MAXIMA[index])throw new Error(`Mark total mismatch Q${index+1}: ${max}`);
+ return {index:index+1,title:TITLES[index],spec:SPEC[index],variant,seed:seed>>>0,max,parts};
+}
+function paper(plan){if(!Array.isArray(plan)||plan.length!==15)throw new Error('Invalid paper plan');const sections=plan.map((p,i)=>section(i,p.seed,p.variant));return {version:VERSION,sections,max:sections.reduce((a,s)=>a+s.max,0)};}
+function allFields(p){return p.sections.flatMap(s=>s.parts.flatMap(p=>p.fields));}
+function inputIds(f){return f.kind==='fraction'?[f.id+'_n',f.id+'_d']:f.kind==='standard'?[f.id+'_a',f.id+'_e']:[f.id];}
+function correctValues(p){const out={};for(const f of allFields(p)){if(f.kind==='fraction'){out[f.id+'_n']=f.target[0];out[f.id+'_d']=f.target[1];}else if(f.kind==='standard'){out[f.id+'_a']=f.target[0];out[f.id+'_e']=f.target[1];}else if(f.kind==='prime')out[f.id]=primeText(f.target);else if(f.kind==='order'||f.kind==='set')out[f.id]=f.target.join(', ');else out[f.id]=f.target;}return out;}
+function expectedPlain(f){if(f.kind==='fraction')return `${f.target[0]}/${f.target[1]}${f.unit?' '+f.unit:''}`;if(f.kind==='standard')return `${f.target[0]} × 10^${f.target[1]}`;if(f.kind==='prime')return primeText(f.target);if(f.kind==='order'||f.kind==='set')return f.target.join(', ');if(f.kind==='power')return `${f.base}^${f.target}`;if(f.kind==='select')return f.options.find(o=>o.value===f.target)?.label||f.target;return `${f.prefix||''}${f.target}${f.unit?' '+f.unit:''}`;}
+function expectedHTML(f){if(f.kind==='fraction')return math(fraction(rat(...f.target))+(f.unit==='π'?'<mi>π</mi>':''));if(f.kind==='standard')return math(standard(...f.target));if(f.kind==='power')return math(power(f.base,f.target));if(f.kind==='prime')return math(Object.entries(f.target).map(([p,e])=>e===1?mn(p):power(p,e)).join(mo('×')));return esc(expectedPlain(f));}
+function gradeField(f,values){
+ const ids=inputIds(f),texts=ids.map(id=>String(values[id]??'').trim());let score=0,reason='Incorrect.';const blank=texts.every(x=>!x);if(blank)return {score:0,max:f.max,reason:'Not answered.',blank:true};
+ if(f.kind==='number'){let raw=texts[0];if(f.prefix&&raw.startsWith(f.prefix))raw=raw.slice(f.prefix.length).trim();if(f.unit&&raw.toLowerCase().endsWith(f.unit.toLowerCase()))raw=raw.slice(0,-f.unit.length).trim();const x=parseDecimal(raw),t=parseDecimal(f.target);if(x&&eq(x,t))score=f.max;else if(!x)reason='Enter one number only, using the units shown.';}
+ else if(f.kind==='select'){if(texts[0]===f.target)score=f.max;}
+ else if(f.kind==='power'){const x=intInput(texts[0]);if(x!==null&&x===BigInt(f.target))score=f.max;else if(x===null)reason='Enter an integer exponent, not the whole power.';}
+ else if(f.kind==='fraction'){
+  const n=intInput(texts[0]),d=intInput(texts[1]);if(n===null||d===null||d<=0n)reason='Use integer entries and a positive, non-zero denominator.';
+  else if(eq(rat(n,d),rat(...f.target))){if(bgcd(n,d)===1n)score=f.max;else{score=Math.max(0,f.max-1);reason='Equivalent value, but not in simplest form.';}}
+ }
+ else if(f.kind==='standard'){
+  const a=parseDecimal(texts[0]),e=intInput(texts[1]);if(a&&a.n>0n&&e!==null&&e>=-20n&&e<=20n){const actual=mul(a,ten(Number(e))),t=mul(parseDecimal(f.target[0]),ten(Number(f.target[1])));if(eq(actual,t)){if(cmp(a,rat(1))>=0&&cmp(a,rat(10))<0)score=f.max;else{score=Math.max(0,f.max-1);reason='Equivalent value, but the coefficient must be at least 1 and less than 10.';}}}else reason='Enter a positive coefficient and an integer exponent.';
+ }
+ else if(f.kind==='prime'){if(mapEqual(parsePrime(texts[0]),f.target))score=f.max;else reason='Use only prime factors, joined by multiplication; powers must be positive integers.';}
+ else if(f.kind==='order'){
+  const entries=texts[0].toUpperCase().split(/\s*[,;]\s*|\s+/).filter(Boolean);if(entries.length===f.target.length&&new Set(entries).size===entries.length&&entries.every(e=>f.target.includes(e))){const right=entries.filter((e,i)=>e===f.target[i]).length;score=right===entries.length?f.max:right>=2?1:0;reason='The letters are not all in the requested order.';}else reason='Use each of A, B, C and D once, separated by commas.';
+ }
+ else if(f.kind==='set'){
+  const tokens=texts[0].split(/\s*[,;]\s*|\s+/).filter(Boolean);if(tokens.length<=20&&tokens.every(t=>/^\d{2}$/.test(t))){const nums=tokens.map(Number),unique=new Set(nums);if(unique.size===nums.length&&nums.every(n=>f.target.includes(n))){const missing=f.target.length-nums.length;score=missing===0?f.max:Math.max(0,f.max-missing);reason=`${missing} possible number${missing===1?' is':'s are'} missing.`;}else reason='There is a repeated or invalid number in the list.';}else reason='List the possible two-digit numbers, separated by commas.';
+ }
+ if(score===f.max)reason='Correct.';
+ return {score,max:f.max,reason,blank:false};
+}
+function grade(p,values={}){const sections=p.sections.map(s=>{const parts=s.parts.map(pt=>{const fields=pt.fields.map(f=>({id:f.id,...gradeField(f,values)}));return {label:pt.label,fields,score:fields.reduce((n,x)=>n+x.score,0),max:fields.reduce((n,x)=>n+x.max,0)};});return {index:s.index,title:s.title,parts,score:parts.reduce((n,x)=>n+x.score,0),max:s.max};});const score=sections.reduce((n,x)=>n+x.score,0),max=p.max;return {sections,score,max,percent:score*100/max,eligible:score*100>=90*max};}
+function fingerprint(s){return JSON.stringify(s.parts.map(p=>({prompt:p.prompt,template:p.template,fields:p.fields.map(f=>({kind:f.kind,target:f.target,base:f.base,options:f.options}))})));}
+function fieldComplete(f,values){return inputIds(f).every(id=>String(values[id]??'').trim()!=='');}
+function verify(p){if(p.max!==100)throw new Error('Paper must have 100 marks');const ids=allFields(p).flatMap(inputIds);if(new Set(ids).size!==ids.length)throw new Error('Duplicate input IDs');const correct=grade(p,correctValues(p));if(correct.score!==100)throw new Error('Answer key does not receive full marks');if(grade(p,{}).score!==0)throw new Error('Blank paper scored marks');for(const f of allFields(p)){if(f.kind==='fraction'&&(BigInt(f.target[1])<=0n||bgcd(...f.target.map(BigInt))!==1n))throw new Error('Fraction key not reduced');if(f.kind==='number'&&!parseDecimal(f.target))throw new Error('Invalid number target');if(f.kind==='standard'){const a=parseDecimal(f.target[0]);if(cmp(a,rat(1))<0||cmp(a,rat(10))>=0)throw new Error('Unnormalised standard form key');}}return true;}
+return {VERSION,TITLES,MAXIMA,SPEC,section,paper,allFields,inputIds,correctValues,grade,gradeField,expectedPlain,expectedHTML,fingerprint,fieldComplete,verify,esc,math,mn,power,fraction,standard,primeText,parseDecimal,intInput,parsePrime,rat,add,sub,mul,div,pow,eq,cmp,dec,roundStep,roundSF,sf,ten,gcd};
+})();
+
+
+/* User interface and attempt lifecycle. No external requests or libraries. */
+(() => {
+'use strict';
+const E=NumberEngine, $=id=>document.getElementById(id), NS='eduqas_number_v2_', memory=new Map();
+let storageFailed=false, current=null, paper=null, phase='idle', busy=false, selected='q1', certificateURL='', certificateKey='', archive=[];
+const completedReasons={submitted:'Submitted for marking.',fullscreen:'Fullscreen was exited. This attempt has ended and has been marked.',reload:'The page was refreshed or left. This attempt has ended and has been marked.'};
+function store(kind,key,value){const k=NS+key;memory.set(kind+k,value);try{window[kind].setItem(k,value);return true;}catch{storageFailed=true;showStorageWarning();return false;}}
+function read(kind,key){const k=NS+key;try{return window[kind].getItem(k)??memory.get(kind+k)??null;}catch{storageFailed=true;return memory.get(kind+k)??null;}}
+function remove(kind,key){const k=NS+key;memory.delete(kind+k);try{window[kind].removeItem(k);}catch{storageFailed=true;}}
+function json(kind,key,fallback){try{const raw=read(kind,key);return raw&&raw.length<300000?JSON.parse(raw):fallback;}catch{return fallback;}}
+function showStorageWarning(){const e=$('storageWarning');if(e)e.hidden=!storageFailed;}
+function randomSeed(){if(window.crypto?.getRandomValues){const a=new Uint32Array(1);crypto.getRandomValues(a);return a[0];}return (Math.floor(Math.random()*4294967296)^Date.now())>>>0;}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=randomSeed()%(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;}
+function hash(s){let a=2166136261,b=2246822519;for(let i=0;i<s.length;i++){a=Math.imul(a^s.charCodeAt(i),16777619);b=Math.imul(b^s.charCodeAt(i),3266489917);}return (a>>>0).toString(16)+(b>>>0).toString(16);}
+function freshPlan(){
+ const saved=json('localStorage','history',[]),history=Array.isArray(saved)?saved:[],plan=[],sections=[];
+ for(let i=0;i<15;i++){
+  const old=history[i]&&typeof history[i]==='object'?history[i]:{};
+  let bag=Array.isArray(old.bag)?old.bag.filter(v=>Number.isInteger(v)&&v>=0&&v<4):[];
+  if(!bag.length){bag=shuffle([0,1,2,3]);if(bag[0]===old.lastVariant)[bag[0],bag[1]]=[bag[1],bag[0]];}
+  const variant=bag.shift();let s,seed,parts,h;const recent=Array.isArray(old.recent)?old.recent:[],pastParts=Array.isArray(old.parts)?old.parts:[];
+  for(let attempt=0;attempt<80;attempt++){
+   seed=randomSeed();s=E.section(i,seed,variant);h=hash(E.fingerprint(s));parts=s.parts.map(p=>hash(JSON.stringify(p)));
+   const repeatedPart=parts.some((p,j)=>Array.isArray(pastParts[j])&&pastParts[j].includes(p));
+   const fractionCollision=i===6&&s.parts.some(p=>p.fields.some(f=>f.kind==='fraction'&&sections[5].parts.some(pp=>pp.fields.some(ff=>ff.kind==='fraction'&&ff.target.join('/')===f.target.join('/')))));
+   if(!recent.includes(h)&&!repeatedPart&&!fractionCollision)break;
+   if(attempt===79)throw new Error('Could not build a fresh, non-repeating question set. Please press Start again.');
+  }
+  plan.push({seed,variant});sections.push(s);
+  history[i]={bag,lastVariant:variant,recent:[h,...recent].slice(0,8),parts:parts.map((p,j)=>[p,...(Array.isArray(pastParts[j])?pastParts[j]:[])].slice(0,5))};
+ }
+ const p={version:E.VERSION,sections,max:100};E.verify(p);store('localStorage','history',JSON.stringify(history));return {plan,paper:p};
+}
+function validRecord(r){return r&&r.version===E.VERSION&&/^\d{1,20}$/.test(r.student)&&typeof r.id==='string'&&r.id.length<90&&['active','ended'].includes(r.phase)&&Array.isArray(r.plan)&&r.plan.length===15&&r.plan.every(p=>p&&Number.isInteger(p.seed)&&p.seed>=0&&p.seed<=4294967295&&Number.isInteger(p.variant)&&p.variant>=0&&p.variant<4)&&r.answers&&typeof r.answers==='object'&&!Array.isArray(r.answers);}
+function snapshotValues(){if(!paper)return {};const out={};for(const f of E.allFields(paper))for(const id of E.inputIds(f)){const input=$(id);out[id]=String(input?.value??'').slice(0,160);}return out;}
+function persist(){if(current)store('sessionStorage','current',JSON.stringify(current));}
+function saveAnswers(){if(phase!=='active'||!current)return;current.answers=snapshotValues();persist();updateProgress();}
+function archiveCurrent(){if(!current||current.phase!=='ended')return;archive=archive.filter(r=>validRecord(r)&&r.student===current.student&&r.id!==current.id);archive.unshift(JSON.parse(JSON.stringify(current)));const keep=archive.slice(0,5);const best=archive.find(r=>E.grade(E.paper(r.plan),r.answers).eligible);if(best&&!keep.some(r=>r.id===best.id))keep.push(best);archive=keep;store('sessionStorage','archive',JSON.stringify(archive));}
+function setInert(yes){for(const e of [$('quizHeader'),$('uxside'),$('main')])e.inert=yes;}
+let previousFocus=null;
+function showModal(id){previousFocus=document.activeElement;setInert(true);$(id).hidden=false;const el=$(id).querySelector('input:not([disabled]),button:not([hidden])');if(el)setTimeout(()=>el.focus(),0);}
+function closeModal(id){$(id).hidden=true;if($('welcomeModal').hidden&&$('confirmModal').hidden){setInert(false);if(previousFocus?.isConnected)previousFocus.focus();}}
+function welcome(existing=false){$('studentInput').value=existing&&current?current.student:(read('sessionStorage','student')||'');$('startError').textContent='';$('startError').hidden=true;$('studentInput').removeAttribute('aria-invalid');$('cancelWelcome').hidden=!current;showModal('welcomeModal');}
+function welcomeError(message){$('startError').textContent=message;$('startError').hidden=false;}
+async function start(student){
+ if(busy||phase==='active')return;
+ if(!/^\d{1,20}$/.test(student)){welcomeError('Enter your student number using 1–20 digits only. Do not enter your name.');$('studentInput').setAttribute('aria-invalid','true');$('studentInput').focus();return;}
+ busy=true;$('startBtn').disabled=true;$('restartBtn').disabled=true;const oldPhase=phase;phase='requesting';
+ try{
+  const fresh=freshPlan();
+  if(current&&current.phase==='ended')archiveCurrent();
+  if((current&&current.student!==student)||(archive.length&&archive[0].student!==student)){archive=[];store('sessionStorage','archive','[]');}
+  current={version:E.VERSION,id:`N-${new Date().toISOString().replace(/[-:TZ.]/g,'').slice(0,14)}-${randomSeed().toString(16).padStart(8,'0')}`,student,plan:fresh.plan,answers:{},startedAt:new Date().toISOString(),phase:'active'};
+  paper=fresh.paper;phase='active';certificateURL='';certificateKey='';store('sessionStorage','student',student);persist();renderPaper();closeModal('welcomeModal');navigate('q1');updateProgress();$('sessionStatus').textContent='In progress';
+ }catch(err){phase=oldPhase;const message=err.message||'Could not start the quiz. Please try again.';if(!$('welcomeModal').hidden)welcomeError(message);else{$('globalNotice').textContent=message+' Your previous results are unchanged.';$('globalNotice').hidden=false;}}
+ finally{busy=false;$('startBtn').disabled=false;$('restartBtn').disabled=false;}
+}
+function fieldHTML(f,inline=false){
+ const id=f.id,esc=E.esc,label=esc(f.label),base=`autocomplete="off" spellcheck="false" maxlength="80" data-field="${id}"`,num=(suffix,cls,aria,mode='decimal')=>`<input id="${id+suffix}" class="answer-input ${cls}" type="text" inputmode="${mode}" ${base} aria-label="${esc(aria)}" aria-describedby="feedback-${id}">`;
+ let control='';
+ if(f.kind==='fraction')control=`<span class="frac-widget" role="group" aria-label="${label}, fraction"><input id="${id}_n" type="text" class="answer-input frac-input" ${base} inputmode="text" aria-label="${label}: numerator, top number" aria-describedby="feedback-${id}"><span class="fraction-rule" aria-hidden="true"></span><input id="${id}_d" type="text" class="answer-input frac-input" ${base} inputmode="numeric" aria-label="${label}: denominator, bottom number" aria-describedby="feedback-${id}"></span>`;
+ else if(f.kind==='standard')control=`<span class="std-widget" role="group" aria-label="Standard form answer">${num('_a','coefficient','Standard form coefficient')}<span class="multiply-sign" aria-hidden="true">×</span><span class="standard-base" aria-hidden="true">10</span>${num('_e','exponent','Power of 10: integer exponent','text')}</span>`;
+ else if(f.kind==='power')control=`<span class="power-widget" role="group" aria-label="Power of ${esc(f.base)}"><span class="power-base" aria-hidden="true">${esc(f.base)}</span>${num('','exponent','Exponent for base '+f.base,'text')}</span>`;
+ else if(f.kind==='select')control=`<select id="${id}" class="answer-input select-input" data-field="${id}" aria-label="${label}" aria-describedby="feedback-${id}"><option value="">Choose…</option>${f.options.map(o=>`<option value="${esc(o.value)}">${esc(o.label)}</option>`).join('')}</select>`;
+ else if(f.kind==='prime')control=`${num('','prime-input',f.label,'text')}<span class="prime-tools">${['×','²','³','⁴','⁵'].map(s=>`<button type="button" class="symbol-btn" data-insert="${s}" data-for="${id}" aria-label="Insert ${s}">${s}</button>`).join('')}</span>`;
+ else control=num('',f.kind==='order'?'order-input':f.kind==='set'?'list-input':'',f.label,f.kind==='number'?'text':'text');
+ return `<div class="answer-field${inline?' inline-field':''}" id="field-${id}"><span class="field-label${inline?' visually-hidden':''}" id="label-${id}">${label}</span><span class="answer-entry">${f.prefix?`<span class="unit prefix">${esc(f.prefix)}</span>`:''}${control}${f.unit?`<span class="unit">${f.unit==='π'?E.math('<mi>π</mi>'):esc(f.unit)}</span>`:''}</span><span id="feedback-${id}" class="field-feedback" hidden></span></div>`;
+}
+const calcIcon='<svg class="nocalc" viewBox="0 0 40 40" aria-hidden="true"><rect x="10" y="5" width="21" height="30" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="10" width="13" height="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 22h3m4 0h3m-10 6h3m4 0h3" stroke="currentColor" stroke-width="3"/><path d="M4 35L36 4" stroke="#b91c1c" stroke-width="3"/></svg>';
+function renderPaper(){
+ if(!paper)return;const markup=paper.sections.map(s=>`<section id="q${s.index}" class="page" role="tabpanel" aria-labelledby="tab-q${s.index}"><div class="qpanel"><div class="qhead"><div class="flex"><h2>Q${s.index}. ${E.esc(s.title)} <span class="marktag">[${s.max} marks]</span></h2>${calcIcon}</div><div class="question-meta"><span>Eduqas Foundation · Non-calculator</span><span id="q${s.index}res" class="score"></span></div></div><div class="qbody">${s.parts.map(pt=>`<div class="question-part" id="part-q${s.index}${pt.label}"><div class="part-heading"><span class="part-letter">(${pt.label})</span><div class="part-prompt">${pt.prompt}</div><span class="part-marks">[${pt.fields.reduce((a,f)=>a+f.max,0)}]</span></div>${pt.note?`<p class="part-note">${E.esc(pt.note)}</p>`:''}<div class="${pt.template?'template-row':'answer-row'}">${pt.template?pt.template.replace(/\[\[([\w]+)\]\]/g,(_,id)=>fieldHTML(pt.fields.find(f=>f.id===id),true)):pt.fields.map(f=>fieldHTML(f)).join('')}</div></div>`).join('')}</div></div><div class="page-actions"><button type="button" class="secondary" data-nav="${s.index===1?'q1':'q'+(s.index-1)}"${s.index===1?' disabled':''}>← Previous</button><span>Question ${s.index} of 15</span><button type="button" class="primary" data-nav="${s.index===15?'results':'q'+(s.index+1)}">${s.index===15?'Results / submit':'Next →'}</button></div></section>`).join('');
+ $('questions').innerHTML=markup;
+ for(const f of E.allFields(paper))for(const id of E.inputIds(f)){const el=$(id);el.value=String(current.answers[id]??'');el.disabled=phase==='ended';}
+ document.querySelectorAll('[data-insert]').forEach(btn=>btn.disabled=phase!=='active');
+ $('studentDisplay').textContent=current.student;$('attemptMini').textContent=current.id.slice(-8).toUpperCase();$('sideSubmit').disabled=phase!=='active';
+ $('restartBtn').hidden=phase==='active';$('otherStudentBtn').hidden=phase==='active';
+ if(phase==='ended')renderMarked();else renderActiveResults();
+ updateProgress();
+}
+function navigate(id){if(!paper&&id!=='results')return;if(!/^q(?:[1-9]|1[0-5])$/.test(id)&&id!=='results')return;selected=id;document.querySelectorAll('section.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('#tabbar button').forEach(b=>{const active=b.dataset.target===id;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));});if(id==='results'&&phase==='active')renderActiveResults();const activeTab=document.querySelector(`#tabbar [data-target="${id}"]`);activeTab?.scrollIntoView({block:'nearest',inline:'nearest'});window.scrollTo({top:0,behavior:'instant'});}
+function updateProgress(){if(!paper)return;const fields=E.allFields(paper),values=phase==='active'?snapshotValues():current.answers,n=fields.filter(f=>E.fieldComplete(f,values)).length;$('progressText').textContent=`${n} / ${fields.length} answer groups completed`;$('progressBar').value=n;$('progressBar').max=fields.length;for(const s of paper.sections){const fs=s.parts.flatMap(p=>p.fields),finished=fs.every(f=>E.fieldComplete(f,values)),btn=$('tab-q'+s.index);btn.classList.toggle('answered',finished);btn.title=`Q${s.index}: ${s.title}${finished?' — all answer groups entered':''}`;}}
+function renderActiveResults(){$('scoreValue').textContent='—';$('scoreTotal').textContent='/ 100';$('percentage').textContent='Not submitted';$('resultStudent').textContent=current?.student||'—';$('resultMeta').textContent='Your answers are marked when you submit, refresh or leave the page.';$('endedBanner').hidden=true;$('certSection').hidden=true;$('breakdownBody').innerHTML='';$('breakdownWrap').hidden=true;$('masterySummary').hidden=true;$('markAllBtn').hidden=false;$('markAllBtn').disabled=phase!=='active';$('downloadResultsBtn').hidden=true;$('historyWrap').hidden=true;$('globalNotice').hidden=true;$('reviewNote').textContent='You can return to any question before submitting.';}
+function askSubmit(){if(phase!=='active')return;saveAnswers();const fields=E.allFields(paper),remaining=fields.filter(f=>!E.fieldComplete(f,current.answers)).length;$('confirmText').textContent=remaining?`${remaining} answer group${remaining===1?' is':'s are'} incomplete. Unanswered entries receive no marks. Submit this attempt now?`:'Submit all answers now? The attempt will be locked for read-only review.';showModal('confirmModal');}
+function finish(reason,render=true){
+ if(phase!=='active'||!current)return;
+ current.answers=snapshotValues();phase='ended';current.phase='ended';current.reason=reason;current.endedAt=new Date().toISOString();current.result=E.grade(paper,current.answers);persist();archiveCurrent();
+ if(!render)return;
+ closeModal('confirmModal');closeModal('welcomeModal');document.querySelectorAll('#questions input,#questions select,#questions button[data-insert]').forEach(el=>el.disabled=true);$('sideSubmit').disabled=true;$('restartBtn').hidden=false;$('otherStudentBtn').hidden=false;renderMarked();updateProgress();navigate('results');$('resultHeading').focus();
+}
+function renderMarked(){
+ const result=E.grade(paper,current.answers);current.result=result;
+ $('scoreValue').textContent=result.score;$('scoreTotal').textContent='/ '+result.max;$('percentage').textContent=result.percent+'%';$('resultStudent').textContent=current.student;$('resultMeta').textContent=`Attempt ${current.id} · ${formatDate(current.endedAt,true)}`;$('sessionStatus').textContent='Completed · read-only';
+ $('markAllBtn').hidden=true;$('downloadResultsBtn').hidden=false;$('globalNotice').hidden=true;
+ $('endedBanner').textContent=completedReasons[current.reason]||completedReasons.submitted;$('endedBanner').hidden=false;$('endedBanner').classList.toggle('ended-early',current.reason!=='submitted');
+ $('masterySummary').hidden=false;const weak=result.sections.filter(s=>s.score<s.max),gaps=result.sections.filter(s=>s.score*2<s.max);
+ $('masterySummary').innerHTML=`<h3>${result.eligible?'90% achievement threshold reached':'Your next revision priorities'}</h3><p>${result.eligible?'This is strong evidence of performance on the Number skills sampled in this attempt.':'You have not yet reached the 90% certificate threshold. Review the answers below, then try a fresh set.'}</p>${weak.length?`<p><strong>Still to secure:</strong> ${weak.map(s=>`Q${s.index} (${s.score}/${s.max})`).join(', ')}.${gaps.length?' Some sections are below half marks, so a high total alone does not show secure understanding of every topic.':''}</p>`:'<p>All sampled answer groups were correct. Keep practising different variants to check that the skills stay secure.</p>'}<p class="small muted">A single self-marked quiz does not prove complete syllabus mastery or predict an examination grade. This is a classroom assessment, not an Eduqas award.</p>`;
+ $('breakdownWrap').hidden=false;$('breakdownBody').innerHTML=result.sections.map(s=>`<tr><th scope="row"><button type="button" class="review-link" data-nav="q${s.index}">Q${s.index} — ${E.esc(s.title)}</button></th><td class="markcell ${s.score===s.max?'mark-green':s.score*2>=s.max?'mark-orange':'mark-red'}">${s.score} / ${s.max}</td><td>${s.score===s.max?'Secure on this set':s.score===0?'Revisit this topic':'Review lost marks'}</td></tr>`).join('');
+ for(const section of result.sections){$('q'+section.index+'res').textContent=`${section.score} / ${section.max}`;for(const pt of section.parts)for(const status of pt.fields){const f=E.allFields(paper).find(f=>f.id===status.id),feedback=$('feedback-'+f.id),box=$('field-'+f.id);feedback.hidden=false;feedback.className='field-feedback '+(status.score===status.max?'correct':status.score>0?'partial':'incorrect');feedback.innerHTML=`<strong>${status.score===status.max?'✓':status.score>0?'◐':'✗'} ${status.score}/${status.max}</strong> ${E.esc(status.reason)}${status.score<status.max?`<span class="expected">Correct answer: ${E.expectedHTML(f)}</span>`:''}`;box.classList.toggle('field-correct',status.score===status.max);box.classList.toggle('field-incorrect',status.score<status.max);}}
+ $('reviewNote').textContent='Select a question to review your locked answers and see why marks were lost. A new attempt starts with fresh questions and empty boxes.';renderCertificate(result);renderHistory();
+}
+function formatDate(s,time=false){const d=new Date(s);if(!Number.isFinite(+d))return 'Date unavailable';return new Intl.DateTimeFormat('en-GB',{day:'2-digit',month:'long',year:'numeric',...(time?{hour:'2-digit',minute:'2-digit'}:{})}).format(d);}
+function renderHistory(){const others=archive.filter(r=>r.id!==current?.id&&r.student===current?.student);$('historyWrap').hidden=!others.length;$('historyList').innerHTML=others.map(r=>{const result=E.grade(E.paper(r.plan),r.answers);return `<button type="button" class="history-item" data-record="${E.esc(r.id)}"><strong>${result.score}/100${result.eligible?' · Certificate available':''}</strong><span>${E.esc(formatDate(r.endedAt,true))} · ${E.esc(r.id.slice(-8).toUpperCase())}</span></button>`;}).join('');}
+function openRecord(id){if(phase==='active')return;const r=archive.find(r=>r.id===id&&validRecord(r));if(!r)return;current=JSON.parse(JSON.stringify(r));paper=E.paper(r.plan);phase='ended';certificateKey='';persist();renderPaper();navigate('results');}
+function renderCertificate(result){$('certSection').hidden=!result.eligible;if(!result.eligible){certificateURL='';certificateKey='';$('certPreview').removeAttribute('src');return;}$('certMessage').textContent=`Student ${current.student}: ${result.score}/100 (${result.percent}%). Your certificate remains available after a fresh attempt in this tab.`;try{const data=buildCertificate();$('certPreview').src=data;$('downloadCertBtn').disabled=false;$('printCertBtn').disabled=false;$('certError').hidden=true;}catch{$('certError').textContent='The certificate image could not be created in this browser. Your score is saved; try a supported desktop browser.';$('certError').hidden=false;$('downloadCertBtn').disabled=true;$('printCertBtn').disabled=true;}}
+function buildCertificate(){
+ if(!current||current.phase!=='ended')throw new Error('No completed attempt');const result=E.grade(paper,current.answers);if(!result.eligible)throw new Error('Certificate threshold not reached');
+ if(certificateKey===current.id&&certificateURL)return certificateURL;
+ const canvas=$('certCanvas'),ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');const W=1800,H=1273;canvas.width=W;canvas.height=H;ctx.fillStyle='#fffdf7';ctx.fillRect(0,0,W,H);ctx.strokeStyle='#132b4d';ctx.lineWidth=8;ctx.strokeRect(34,34,W-68,H-68);ctx.strokeStyle='#b49352';ctx.lineWidth=2;ctx.strokeRect(56,56,W-112,H-112);
+ ctx.fillStyle='#eaf0fa';ctx.fillRect(57,57,W-114,178);ctx.textAlign='center';
+ const text=(s,y,font,colour='#17263c',max=1540)=>{ctx.fillStyle=colour;ctx.font=font;let size=parseFloat(font.match(/\d+(?:\.\d+)?px/)?.[0]||'30');while(ctx.measureText(s).width>max&&size>16){size--;ctx.font=font.replace(/\d+(?:\.\d+)?px/,size+'px');}ctx.fillText(s,W/2,y);};
+ text('CERTIFICATE OF ACHIEVEMENT',142,'bold 60px Georgia');text('GCSE Mathematics · Number',201,'32px Arial','#355177');
+ text('Awarded to',332,'32px Arial');text('Student '+current.student,419,'bold 66px Georgia');
+ text(result.percent+'%',565,'bold 108px Arial','#1d4ed8');text(result.score+' out of '+result.max+' marks',624,'34px Arial');
+ text('Eduqas Foundation-focused · Non-calculator',718,'bold 36px Arial');text('For reaching the 90% achievement threshold',784,'32px Arial');text('on this randomly generated Number assessment.',830,'32px Arial');
+ text('Strong performance on the sampled skills — keep practising.',902,'29px Arial','#52657b');
+ ctx.strokeStyle='#b49352';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(170,976);ctx.lineTo(W-170,976);ctx.stroke();
+ text('Completed '+formatDate(current.endedAt),1031,'28px Arial');text('Attempt '+current.id,1078,'23px Arial','#52657b');
+ const ending=current.reason==='fullscreen'?'Attempt ended automatically when fullscreen was exited.':current.reason==='reload'?'Attempt ended automatically when the page was refreshed or left.':'Attempt submitted for marking.';
+ text(ending,1130,'23px Arial','#52657b');text('Classroom certificate · Not an official Eduqas qualification or guarantee of complete mastery.',1185,'22px Arial','#52657b');
+ certificateURL=canvas.toDataURL('image/png');certificateKey=current.id;return certificateURL;
+}
+function triggerDownload(url,filename){const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();}
+function downloadCertificate(){try{const url=buildCertificate();triggerDownload(url,`Number_Certificate_Student_${current.student}_${current.result.score}pct_${current.id}.png`);}catch(err){$('certError').textContent=err.message;$('certError').hidden=false;}}
+function printCertificate(){try{const url=buildCertificate(),w=window.open('','_blank');if(!w)throw new Error('Your browser blocked the print window. Allow pop-ups or download the PNG certificate instead.');w.opener=null;w.document.open();w.document.write('<!doctype html><html><head><title>Number certificate</title><style>@page{size:A4 landscape;margin:0}html,body{margin:0;background:white}img{display:block;width:100%;height:auto;max-height:100vh;object-fit:contain}</style></head><body><img alt="Certificate of achievement"></body></html>');w.document.close();const img=w.document.querySelector('img');img.onload=()=>{w.focus();setTimeout(()=>w.print(),100);};img.src=url;}catch(err){$('certError').textContent=err.message;$('certError').hidden=false;}}
+function downloadResults(){if(phase!=='ended')return;const result=E.grade(paper,current.answers),lines=['GCSE MATHS — NUMBER','Eduqas Foundation-focused; non-calculator','Student number: '+current.student,'Attempt: '+current.id,'Completed: '+formatDate(current.endedAt,true),completedReasons[current.reason]||'Submitted.',`Score: ${result.score}/${result.max} (${result.percent}%)`,'Certificate: '+(result.eligible?'Eligible (90% or more)':'Not yet eligible'),''];for(const s of paper.sections){const sr=result.sections[s.index-1];lines.push(`Q${s.index}. ${s.title}: ${sr.score}/${s.max}`);for(const p of s.parts)for(const f of p.fields){const g=E.gradeField(f,current.answers);lines.push(`  (${p.label}) ${f.label}: ${g.score}/${g.max}. ${g.reason}`,`    Entered: ${E.inputIds(f).map(id=>current.answers[id]||'[blank]').join(' | ')}`,`    Correct: ${E.expectedPlain(f)}`);}lines.push('');}lines.push('This records performance on sampled questions, not complete syllabus mastery or an official examination grade.');const url=URL.createObjectURL(new Blob([lines.join('\r\n')],{type:'text/plain;charset=utf-8'}));triggerDownload(url,`Number_Results_${current.student}_${current.id}.txt`);setTimeout(()=>URL.revokeObjectURL(url),30000);}
+function setTheme(mode){const dark=mode==='dark';document.body.classList.toggle('dark',dark);document.documentElement.style.backgroundColor=dark?'#000':'#fff';$('lightBtn').classList.toggle('active',!dark);$('darkBtn').classList.toggle('active',dark);$('lightBtn').setAttribute('aria-pressed',String(!dark));$('darkBtn').setAttribute('aria-pressed',String(dark));store('localStorage','theme',dark?'dark':'light');}
+function setOverlay(mode){if(!['none','blue','yellow'].includes(mode))mode='none';document.body.classList.remove('overlay-blue','overlay-yellow');if(mode!=='none')document.body.classList.add('overlay-'+mode);for(const x of ['none','blue','yellow']){$('ov'+x+'Btn').classList.toggle('active',x===mode);$('ov'+x+'Btn').setAttribute('aria-pressed',String(x===mode));}store('localStorage','overlay',mode);}
+function sizeHeader(){document.documentElement.style.setProperty('--header-height',Math.ceil($('quizHeader').getBoundingClientRect().height)+'px');}
+// Events are attached once. Regenerating the DOM does not add duplicate handlers.
+$('startForm').addEventListener('submit',e=>{e.preventDefault();start($('studentInput').value.trim());});
+$('cancelWelcome').addEventListener('click',()=>closeModal('welcomeModal'));
+$('restartBtn').addEventListener('click',()=>{if(current)start(current.student);else welcome();});
+$('otherStudentBtn').addEventListener('click',()=>{welcome();$('studentInput').value='';$('studentInput').focus();});
+$('markAllBtn').addEventListener('click',askSubmit);$('sideSubmit').addEventListener('click',askSubmit);
+$('confirmSubmit').addEventListener('click',()=>finish('submitted'));$('cancelSubmit').addEventListener('click',()=>closeModal('confirmModal'));
+$('downloadCertBtn').addEventListener('click',downloadCertificate);$('printCertBtn').addEventListener('click',printCertificate);$('downloadResultsBtn').addEventListener('click',downloadResults);
+$('lightBtn').addEventListener('click',()=>setTheme('light'));$('darkBtn').addEventListener('click',()=>setTheme('dark'));for(const m of ['none','blue','yellow'])$('ov'+m+'Btn').addEventListener('click',()=>setOverlay(m));
+$('questions').addEventListener('input',saveAnswers);$('questions').addEventListener('change',saveAnswers);
+document.addEventListener('click',e=>{const nav=e.target.closest('[data-target],[data-nav]');if(nav&&!nav.disabled)navigate(nav.dataset.target||nav.dataset.nav);const record=e.target.closest('[data-record]');if(record)openRecord(record.dataset.record);const b=e.target.closest('[data-insert]');if(b&&phase==='active'&&!b.disabled){const el=$(b.dataset.for),s=el.selectionStart??el.value.length,t=el.selectionEnd??s;if(el.disabled)return;el.value=el.value.slice(0,s)+b.dataset.insert+el.value.slice(t);el.focus();el.setSelectionRange(s+b.dataset.insert.length,s+b.dataset.insert.length);saveAnswers();}});
+window.addEventListener('pagehide',()=>{if(phase==='active')finish('reload',false);});
+window.addEventListener('pageshow',e=>{if(e.persisted&&phase==='ended'){renderPaper();navigate('results');}});
+window.addEventListener('resize',sizeHeader);
+document.addEventListener('keydown',e=>{
+ const modal=!$('welcomeModal').hidden?$('welcomeModal'):!$('confirmModal').hidden?$('confirmModal'):null;
+ if(modal&&e.key==='Tab'){const els=[...modal.querySelectorAll('button:not([disabled]):not([hidden]),input:not([disabled])')].filter(el=>el.offsetParent!==null);if(els.length){const first=els[0],last=els[els.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}return;}
+ if((e.ctrlKey||e.metaKey)&&['u','c'].includes(e.key.toLowerCase())){e.preventDefault();return;}
+ const editable=/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName);
+ if(!modal&&!editable&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const index=selected==='results'?15:Number(selected.slice(1))-1,step=e.key==='ArrowRight'?1:-1,next=Math.max(0,Math.min(15,index+step));navigate(next===15?'results':'q'+(next+1));}
+});
+document.addEventListener('contextmenu',e=>e.preventDefault());document.addEventListener('copy',e=>e.preventDefault());document.addEventListener('dragstart',e=>e.preventDefault());
+function boot(){
+ setTheme(read('localStorage','theme')||'light');setOverlay(read('localStorage','overlay')||'none');sizeHeader();
+ const savedArchive=json('sessionStorage','archive',[]);archive=Array.isArray(savedArchive)?savedArchive.filter(validRecord).slice(0,6):[];
+ const r=json('sessionStorage','current',null);
+ if(validRecord(r)){try{current=r;paper=E.paper(r.plan);E.verify(paper);phase=r.phase;if(phase==='active'){current.phase='ended';current.reason='reload';current.endedAt=new Date().toISOString();current.result=E.grade(paper,current.answers);phase='ended';persist();archiveCurrent();}renderPaper();navigate('results');}catch{current=null;paper=null;phase='idle';remove('sessionStorage','current');welcome();}}
+ else{if(r)remove('sessionStorage','current');welcome();}
+ showStorageWarning();
+}
+boot();
+})();
+
+})();
+</script>
+</body></html>
